@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Award, Building2, Clock, FileCheck, Mail, MapPin, Phone, User } from "lucide-react";
 
 export default function Home() {
   const items = [
@@ -11,6 +11,45 @@ export default function Home() {
       value: "1234 Elm St #1000, San Francisco, CA",
     },
     { icon: Clock, label: "Hours", value: "Mon - Fri: 8am - 5pm" },
+  ];
+
+  const services = [
+    {
+      title: "Mobile Services",
+      description:
+        "Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor",
+      icon: User,
+      link: "LEARN MORE",
+    },
+    {
+      title: "Serving the Entire Bay Area",
+      description:
+        "Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor",
+      icon: Building2,
+      link: "LEARN MORE",
+    },
+    {
+      title: "Apostille & Authentication",
+      description:
+        "Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor",
+      icon: FileCheck,
+      link: "LEARN MORE",
+    },
+    {
+      title: "Acknowledgments",
+      description:
+        "Sed porttitor lectus nibh. Curabitur aliquet quam id dui posuere blandit. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor",
+      icon: Award,
+      link: "LEARN MORE",
+    },
+  ];
+
+  const bulletPoints = [
+    "SIT AMET NIBH",
+    "NULLA SIT AMET NIBH",
+    "CURABITUR ALIQUET",
+    "CURABITUR ALIQUET",
+    "NULLA SIT AMET NIBH",
   ];
   return (
     <div>
@@ -31,7 +70,7 @@ export default function Home() {
               Available 6 days a week
             </div>
             <h1 className="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight">
-              TPL GlOBAL
+              TPL GLOBAL
             </h1>
             <div className="mx-auto w-20 h-1 bg-blue-400 mb-6" />
             <p className="text-white/90 text-base md:text-lg mb-8">
@@ -63,6 +102,76 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl py-20 mx-auto px-6">
+          {/* Header Section */}
+          <div className="mb-16">
+
+            <div className="grid lg:grid-cols-3 gap-12 items-start">
+              {/* Left Column */}
+              <div className="lg:col-span-1">
+                <h2 className="text-4xl lg:text-5xl font-serif text-foreground mb-8 leading-tight">
+                  We Offer Mobile Notary & Apostille Services
+                </h2>
+              </div>
+
+              {/* Middle Column */}
+              <div className="lg:col-span-1">
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae; Donec velit neque, auctor sit
+                  amet aliquam vel, ullamcorper sit amet ligula. Donec
+                  sollicitudin molestie malesuada. Nulla quis lorem ut libero
+                  malesuada feugiat. Quisque velit nisi, pretium ut lacinia in,
+                  elementum id enim. Donec cursus congue lorem.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Maecenas rhoncus congue lorem. Proin cursus cursus mauris,
+                  consectetur a pellentesque nec, egestas non nisi.
+                </p>
+              </div>
+
+              {/* Right Column - Bullet Points */}
+              <div className="lg:col-span-1">
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia curae; Donec velit neque, auctor sit
+                  amet aliquam vel, ullamcorper sit amet ligula. Donec
+                  sollicitudin molestie malesuada. Nulla quis lorem ut libero
+                  malesuada feugiat. Quisque velit nisi, pretium ut lacinia in,
+                  elementum id enim. Donec cursus congue lorem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="group">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-orange-600/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-orange-600/20 transition-colors">
+                    <service.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-4 leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+                  <button className="text-primary font-semibold text-sm hover:text-primary/80 transition-colors flex items-center gap-2">
+                    {service.link}
+                    <span className="text-primary">→</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="pt-12">
+            <img src="/services.png" alt=""/>
           </div>
         </div>
       </section>

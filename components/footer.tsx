@@ -4,13 +4,8 @@ import { Textarea } from "@/components/ui/textarea";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-black via-black/80 to-black/50 ">
-      <img
-        src="/footer.jpg"
-        alt="Notary stamp and documents on a desk"
-        className="absolute -z-10 overflow-clip h-full w-screen bg-cover"
-      />
-      <div className="max-w-7xl mx-auto py-44">
+    <footer className="bg-[linear-gradient(to_bottom,black,rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url('/footer.jpg')] bg-cover bg-no-repeat">
+      <div className="max-w-7xl mx-auto pt-32 pb-12">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left side - Service categories */}
           <div>
