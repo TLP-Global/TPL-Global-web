@@ -1,103 +1,71 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Home() {
+  const items = [
+    { icon: Phone, label: "Phone", value: "(628) 352-1351" },
+    { icon: Mail, label: "Email", value: "info@notary.com" },
+    {
+      icon: MapPin,
+      label: "Office",
+      value: "1234 Elm St #1000, San Francisco, CA",
+    },
+    { icon: Clock, label: "Hours", value: "Mon - Fri: 8am - 5pm" },
+  ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <section className="relative">
+        {/* Background image */}
+        <div className="relative min-h-[72vh] flex items-center">
+          <img
+            src="/hero.jpg"
+            alt="Notary stamp and documents on a desk"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black/50" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Content */}
+          <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+            <div className="uppercase tracking-wide text-blue-400 font-semibold text-sm mb-6">
+              Available 6 days a week
+            </div>
+            <h1 className="font-serif text-4xl md:text-6xl text-white mb-6 leading-tight">
+              TPL GlOBAL
+            </h1>
+            <div className="mx-auto w-20 h-1 bg-blue-400 mb-6" />
+            <p className="text-white/90 text-base md:text-lg mb-8">
+              We come to you. Professional, licensed, bonded and insured notary
+              services for real estate, legal and personal documents. Fast,
+              reliable and convenient.
+            </p>
+            <Button
+              size="lg"
+              className="bg-orange-600 text-white hover:bg-orange-600/90 font-bold cursor-pointer px-8 py-3"
+            >
+              Schedule an Appointment
+            </Button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="max-w-6xl mx-auto -mt-12 relative z-40 px-6">
+          <div className="bg-card text-card-foreground rounded-xl shadow-2xl border border-border p-6 md:p-8">
+            <div className="grid gap-8 md:grid-cols-4">
+              {items.map(({ icon: Icon, label, value }, idx) => (
+                <div key={idx} className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-orange-600">
+                    <Icon size={20} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{label}</div>
+                    <div className="font-semibold">{value}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
