@@ -42,7 +42,7 @@ const Navbar = () => {
 
             {/* Desktop CTA */}
             <div className="hidden md:flex">
-              <Button className="btn-professional">
+              <Button className="bg-gradient-to-r from-blue-950 to-blue-800">
                 <Phone className="mr-2 h-4 w-4" />
                 Book Consultation
               </Button>
@@ -74,7 +74,7 @@ const Navbar = () => {
         </div>
       {/* Mobile Bottom Bar */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary p-4">
-        <Button className="w-full btn-accent text-primary font-semibold">
+        <Button className="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-primary font-semibold">
           <Phone className="mr-2 h-4 w-4" />
           Book Consultation
         </Button>

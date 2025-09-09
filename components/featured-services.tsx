@@ -65,23 +65,23 @@ const FeaturedServices = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto py-32 bg-secondary/30">
+    <section className=" py-32 bg-secondary/30">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
             Featured Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-blue-950/60 max-w-2xl mx-auto">
             Get answers to common questions about our most requested immigration services.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service) => (
             <Card key={service.title} className="card-professional">
               <CardHeader>
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-primary rounded-lg">
+                  <div className="p-3 bg-blue-950 rounded-lg">
                     <service.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ const FeaturedServices = () => {
                       <AccordionTrigger className="text-left text-sm font-medium">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-sm text-muted-foreground">
+                      <AccordionContent className="text-sm text-blue-950/60">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -112,7 +112,7 @@ const FeaturedServices = () => {
                     <BookOpen className="mr-1 h-4 w-4" />
                     Full Guide
                   </Button>
-                  <Button size="sm" className="btn-professional flex-1">
+                  <Button size="sm" className="bg-gradient-to-r from-blue-950 to-blue-800 flex-1">
                     <MessageCircle className="mr-1 h-4 w-4" />
                     Talk to Us
                   </Button>

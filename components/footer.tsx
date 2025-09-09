@@ -1,106 +1,87 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Scale } from 'lucide-react';
 
 const Footer = () => {
+  const navigation = [
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Blog', href: '#blog' },
+    { name: 'Resources', href: '#resources' },
+    { name: 'Contact', href: '#contact' },
+  ];
+
   return (
-    <footer className="bg-[linear-gradient(to_bottom,black,rgba(0,0,0,0.8),rgba(0,0,0,0.5)),url('/footer.jpg')] bg-cover bg-no-repeat">
-      <div className="max-w-7xl mx-auto pt-32 pb-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left side - Service categories */}
-          <div>
-            <div className="text-orange-600 text-sm font-medium mb-4 tracking-wider uppercase">
-              GET IN TOUCH
+    <footer className="bg-blue-950 text-background py-20">
+      <div className="max-w-7xl mx-auto py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* Logo and Description */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <Scale className="h-8 w-8 text-accent" />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">TPL Global</span>
+                <span className="text-sm text-background/70">Immigration Law</span>
+              </div>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-serif text-white mb-8 leading-tight">
-              Get a Free Estimate or
-              <br />
-              Schedule an Appointment
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Notarization Packages
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Proin eget tortor risus. Vestibulum ac diam sit amet quam
-                  vehicula elementum sed sit amet dui.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Mobile Service
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Proin eget tortor risus. Vestibulum ac diam sit amet quam
-                  vehicula elementum sed sit amet dui.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  Certifications
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Proin eget tortor risus. Vestibulum ac diam sit amet quam
-                  vehicula elementum sed sit amet dui.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  I-Documents
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  Proin eget tortor risus. Vestibulum ac diam sit amet quam
-                  vehicula elementum sed sit amet dui.
-                </p>
-              </div>
+            <p className="text-background/80 mb-4 max-w-md">
+              Providing clear, effective U.S. immigration strategies with practical advice 
+              and careful execution for individuals and families worldwide.
+            </p>
+            <div className="text-background/70 text-sm">
+              <p>Tejas Patel, Esq.</p>
+              <p>11 Years Experience Since 2014</p>
+              <p>TPL Global - Founded November 2020</p>
             </div>
           </div>
 
-          {/* Right side - Contact form */}
-          <div className="bg-white p-8 rounded-lg">
-            <form className="space-y-6">
-              <div>
-                <Input
-                  placeholder="Name"
-                  className="w-full h-12 border-gray-200 bg-gray-50"
-                />
-              </div>
+          {/* Navigation */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Navigation</h3>
+            <ul className="space-y-2">
+              {navigation.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-background/80 hover:text-accent transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full h-12 border-gray-200 bg-gray-50"
-                />
-              </div>
-
-              <div>
-                <Textarea
-                  placeholder="Message"
-                  className="w-full min-h-[120px] border-gray-200 bg-gray-50 resize-none"
-                />
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full h-12 bg-orange-600 hover:bg-orange-600/90 text-white font-semibold tracking-wider uppercase"
-              >
-                SEND MESSAGE
-              </Button>
-            </form>
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-background/80 text-sm">
+              <p>Professional consultation available</p>
+              <p>Remote services worldwide</p>
+              <p>Initial consultation scheduling</p>
+            </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-700 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2025 Certified TPL Global. All rights reserved.
-          </p>
+        {/* Bottom Section */}
+        <div className="border-t border-background/20 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-background/60 text-sm">
+              © 2024 TPL Global Immigration Law. All rights reserved.
+            </div>
+            <div className="text-background/60 text-sm">
+              Licensed to practice immigration law
+            </div>
+          </div>
+          
+          {/* Legal Disclaimer */}
+          <div className="mt-6 p-4 bg-background/10 rounded-lg">
+            <p className="text-background/70 text-xs leading-relaxed">
+              <strong>Disclaimer:</strong> This site provides general information only and does not constitute legal advice. 
+              Results depend on your individual facts and circumstances. Prior results do not guarantee a similar outcome. 
+              An attorney-client relationship is not formed by visiting this website or contacting our office until a 
+              written agreement is signed.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

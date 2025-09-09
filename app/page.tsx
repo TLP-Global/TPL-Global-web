@@ -12,6 +12,11 @@ import {
   TrendingUp,
   User,
 } from "lucide-react";
+import QuickPathTiles from "@/components/quick-path-tiles";
+import HowWeWork from "@/components/how-we-work";
+import TestimonialsAndTrust from "@/components/testimonials";
+import BlogAndResources from "@/components/blog-resources";
+import FinalCTA from "@/components/final-cta";
 
 export default function Home() {
   const items = [
@@ -85,7 +90,7 @@ export default function Home() {
             </p>
             <Button
               size="lg"
-              className="bg-orange-600 text-white hover:bg-orange-600/90 font-bold cursor-pointer px-8 py-3"
+              className="bg-white text-blue-950 hover:bg-orange-600/90 font-bold cursor-pointer px-8 py-3"
             >
               Schedule an Appointment
             </Button>
@@ -135,8 +140,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-20 bg-background">
+      <section className="mt-28 bg-background">
+        <QuickPathTiles/>
+      </section>
+      <section className="mt-28 bg-background">
+        <HowWeWork/>
+      </section>
+      <section className="mt-28 bg-background">
         <FeaturedServices/>
+      </section>
+      <section className="mt-28 bg-background">
+        <TestimonialsAndTrust/>
+      </section>
+      <section className="mt-28 bg-background">
+        <BlogAndResources/>
+      </section>
+      <section className="mt-28 bg-background">
+        <FinalCTA/>
       </section>
     </div>
   );
