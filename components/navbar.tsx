@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about-us" },
     { name: "Resources", href: "#resources" },
     { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <a href="#" className="text-xl font-bold">
+              <a href="/" className="text-xl font-bold">
                 <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
               </a>
             </div>

@@ -90,7 +90,8 @@ export default function Home() {
             </p>
             <Button
               size="lg"
-              className="bg-white text-blue-950 hover:bg-orange-600/90 font-bold cursor-pointer px-8 py-3"
+              variant={"outline"}
+              className="bg-white text-blue-950 font-bold cursor-pointer px-8 py-3"
             >
               Schedule an Appointment
             </Button>
