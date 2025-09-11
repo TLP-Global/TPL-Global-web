@@ -55,19 +55,19 @@ const QuickPathTiles = () => {
           title: "Spouse & Fiancé(e) (IR/CR-1, K-1, K-3)",
           description: "Marriage-based options explained simply.",
           icon: Heart,
-          link:"/"
+          link:"/services/families"
         },
         {
           title: "Parents & Children",
           description: "Family petitions and who qualifies.",
           icon: Baby,
-          link:"/"
+          link:"/services/families"
         },
         {
           title: "Siblings",
           description: "How family preference categories work.",
           icon: UserPlus,
-          link:"/"
+          link:"/services/families"
         },
       ],
     },
@@ -79,31 +79,31 @@ const QuickPathTiles = () => {
           title: "Asylum",
           description: "Protection if you fear harm in your home country.",
           icon: Shield,
-          link:"/"
+          link:"/services/humanitarian"
         },
         {
           title: "U Visa",
           description: "For victims of certain crimes.",
           icon: Scale,
-          link:"/"
+          link:"/services/humanitarian"
         },
         {
           title: "T Visa",
           description: "For survivors of trafficking.",
           icon: HandHeart,
-          link:"/"
+          link:"/services/humanitarian"
         },
         {
           title: "VAWA",
           description: "Self-petition for victims of abuse.",
           icon: UserCheck,
-          link:"/"
+          link:"/services/humanitarian"
         },
         {
           title: "SIJ",
           description: "Status for children facing hardship.",
           icon: Baby,
-          link:"/"
+          link:"/services/humanitarian"
         },
       ],
     },

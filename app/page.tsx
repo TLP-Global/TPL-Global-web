@@ -2,6 +2,7 @@ import FeaturedServices from "@/components/featured-services";
 import { Button } from "@/components/ui/button";
 import {
   Award,
+  BookOpen,
   Building2,
   Calendar,
   Clock,
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
             <h1 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
               Clear, Effective U.S. immigration strategy
-              <span className="block text-accent">
+              <span className="block text-amber-400">
                 {" "}
                 Wherever you are in the world.
               </span>
@@ -88,13 +89,19 @@ export default function Home() {
               We help individuals and families with visas, green cards, and
               citizenship. Practical advice. Careful execution
             </p>
-            <Button
-              size="lg"
-              variant={"outline"}
-              className="bg-white text-blue-950 font-bold cursor-pointer px-8 py-3"
-            >
-              Schedule an Appointment
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Book a Consultation
+              </Button>
+              <Button variant="outline" size="lg">
+                <BookOpen className="mr-2 h-5 w-5" />
+                Start Here – Free Guides
+              </Button>
+            </div>
           </div>
         </div>
       </section>
