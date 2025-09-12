@@ -46,7 +46,7 @@ const BlogAndResources = () => {
   ];
 
   return (
-    <section className="mx-auto max-w-7xl bg-gradient-subtle">
+    <section className="mx-auto max-w-7xl bg-gradient-subtle px-4">
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           

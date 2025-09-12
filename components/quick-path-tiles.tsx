@@ -116,13 +116,13 @@ const QuickPathTiles = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950">
             Find Your Path
           </h2>
-          <p className="text-xl text-blue-950/60 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-950/60 max-w-2xl mx-auto px-4 md:px-0">
             Navigate U.S. immigration with confidence. Choose your pathway to
             get started.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-8">
+        <div className="flex flex-wrap gap-8 justify-center ">
           {pathways.map((pathway) => (
             <div key={pathway.category} className="w-96 h-full space-y-4">
               <div className="flex items-center gap-3 mb-6">

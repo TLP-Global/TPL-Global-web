@@ -37,7 +37,7 @@ const HowWeWork = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 ">
           {steps.map((step, index) => (
             <Card key={step.title} className=" text-center relative">
               <CardHeader>

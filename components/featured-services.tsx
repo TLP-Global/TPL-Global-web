@@ -65,7 +65,7 @@ const FeaturedServices = () => {
   ];
 
   return (
-    <section className=" py-32 bg-secondary/30">
+    <section className="px-4 py-32 bg-secondary/30">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
@@ -76,7 +76,7 @@ const FeaturedServices = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto ">
           {services.map((service) => (
             <Card key={service.title} className="card-professional">
               <CardHeader>

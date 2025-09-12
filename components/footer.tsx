@@ -10,18 +10,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-950 text-background py-20">
+    <footer className="bg-blue-950 text-background py-20 px-4">
       <div className="max-w-7xl mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Scale className="h-8 w-8 text-accent" />
-              <div className="flex flex-col">
-                <span className="text-xl font-bold">TPL Global</span>
-                <span className="text-sm text-background/70">Immigration Law</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <a href="/" className="text-xl font-bold">
+                <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
+              </a>
             </div>
             <p className="text-background/80 mb-4 max-w-md">
               Providing clear, effective U.S. immigration strategies with practical advice 
@@ -62,14 +60,27 @@ const Footer = () => {
           </div>
         </div>
 
+
         {/* Bottom Section */}
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-background/60 text-sm">
               © 2024 TPL Global Immigration Law. All rights reserved.
             </div>
-            <div className="text-background/60 text-sm">
-              Licensed to practice immigration law
+            <div className="flex items-center gap-4 text-background/60 text-sm">
+              <a href="/faqs" className="hover:text-accent transition-colors">
+               FAQs 
+              </a>
+              <span>•</span>
+              <a href="/privacy-policy" className="hover:text-accent transition-colors">
+                Privacy Policy
+              </a>
+              <span>•</span>
+              <a href="/terms-of-use" className="hover:text-accent transition-colors">
+                Terms of Use
+              </a>
+              <span>•</span>
+              <span>Licensed to practice immigration law</span>
             </div>
           </div>
           

@@ -17,9 +17,9 @@ const Navbar = () => {
   ];
 
   return (
-      <header className="stikcy mx-auto py-4 bg-white top-0 left-0 right-0 z-50 max-w-7xl">
-        <div className="section-container">
-          <div className="flex h-16 items-center justify-between">
+      <header className="stikcy  py-4 bg-white top-0 left-0 right-0 z-50 ">
+        <div className="section-container max-w-7xl mx-auto ">
+          <div className="flex h-16 items-center justify-between px-4 md:px-0 lg:px-0">
             {/* Logo */}
             <div className="flex items-center gap-2">
               <a href="/" className="text-xl font-bold">
@@ -51,12 +51,10 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
-                </Button>
+                  <Menu className="h-8 w-8 md:hidden" />
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px]">
-                <div className="flex flex-col gap-4 mt-8">
+                <div className="flex flex-col gap-4 mt-8 px-4 pt-12">
                   {navigation.map((item) => (
                     <a
                       key={item.name}

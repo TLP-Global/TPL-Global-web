@@ -19,7 +19,7 @@ import {
 
 const Humanitarian = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-4">
       <main className="py-16 md:py-24">
         <div className="section-container max-w-7xl mx-auto">
           {/* Hero Section */}
