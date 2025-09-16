@@ -140,13 +140,6 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-6 text-center ">
-            <p className="text-white/60 text-sm">
-              Mr. Tejas Patel has 11 years of experience since 2014. His
-              company, TPL Global, was founded on November 5, 2020, and has been
-              growing steadily for the past five years.
-            </p>
-          </div>
         </div>
       </section>
       <section className="bg-background">
