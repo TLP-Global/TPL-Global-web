@@ -3,20 +3,20 @@ import { Scale } from 'lucide-react';
 const Footer = () => {
   const navigation = [
     { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '/about-us' },
     { name: 'Blog', href: '#blog' },
     { name: 'Resources', href: '#resources' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <footer className="bg-blue-950 text-background py-20 px-4">
+    <footer className="bg-black/50 text-background py-20 px-4">
       <div className="max-w-7xl mx-auto py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-4">
               <a href="/" className="text-xl font-bold">
                 <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
               </a>

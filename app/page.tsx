@@ -64,8 +64,9 @@ export default function Home() {
 
   return (
     <div className=" mx-auto w-screen">
+      <img src="/hero.jpg" alt="" className="fixed bottom-0 -z-10 w-screen"/>
       <section className="relative">
-        {/* Background image */}
+        {/* Background video*/}
         <div className="relative min-h-screen flex items-center">
           <video
             autoPlay
@@ -105,7 +106,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-12 bg-secondary/50">
+      <section className="py-12 bg-black/20">
         <div className="section-container">
           <div className="flex flex-col max-w-7xl mx-auto lg:flex-row items-center justify-between gap-8">
             {/* Government Logos */}
@@ -139,8 +140,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-6 text-center">
-            <p className="text-muted-foreground text-sm">
+          <div className="mt-6 text-center ">
+            <p className="text-white/60 text-sm">
               Mr. Tejas Patel has 11 years of experience since 2014. His
               company, TPL Global, was founded on November 5, 2020, and has been
               growing steadily for the past five years.
@@ -148,22 +149,22 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-28 bg-background">
+      <section className="bg-background">
         <QuickPathTiles/>
       </section>
-      <section className="mt-28 bg-background">
+      <section className="mt-52 bg-background">
         <HowWeWork/>
       </section>
-      <section className="mt-28 bg-background">
+      <section className="mt-52 bg-background">
         <FeaturedServices/>
       </section>
-      <section className="mt-28 bg-background">
+      <section className="mt-52 bg-background">
         <TestimonialsAndTrust/>
       </section>
-      <section className="mt-28 bg-background">
+      <section className="mt-52 bg-background">
         <BlogAndResources/>
       </section>
-      <section className="mt-28 bg-background">
+      <section className=" bg-background">
         <FinalCTA/>
       </section>
     </div>

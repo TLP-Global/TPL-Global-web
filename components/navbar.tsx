@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-      <header className="stikcy  py-4 bg-white top-0 left-0 right-0 z-50 ">
+      <header className="absolute py-4 bg-white top-0 left-0 right-0 z-50 ">
         <div className="section-container max-w-7xl mx-auto ">
           <div className="flex h-16 items-center justify-between px-4 md:px-0 lg:px-0">
             {/* Logo */}

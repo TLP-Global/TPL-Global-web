@@ -45,7 +45,7 @@ const TestimonialsAndTrust = () => {
   ];
 
   return (
-    <section className="mx-auto max-w-7xl ">
+    <section className="mx-auto py-20 max-w-7xl ">
       <div className="section-container ">
         {/* Client Testimonials */}
         <div className="text-center mb-16">
@@ -61,8 +61,8 @@ const TestimonialsAndTrust = () => {
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 h-72">
-                  <Card className="border border-border rounded-lg h-full shadow-lg">
+                <CarouselItem key={index} className="md:basis-1/2 h-72 ">
+                  <Card className="border border-border rounded-lg h-full  hover:shadow-2xl hover:bg-gradient-to-br from-blue-200/40 to-blue-50/40 duration-1000">
                     <CardContent className="p-8 text-center">
                       <Quote className="h-8 w-8 text-blue-950 mx-auto mb-4" />
                       <blockquote className="text-lg italic text-blue-950 mb-4">
@@ -86,7 +86,7 @@ const TestimonialsAndTrust = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="mb-16">
+        <div className="mb-16 my-32">
           <h3 className="text-2xl font-bold text-center mb-8">Why Clients Choose Us</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whyChooseUs.map((item) => (
@@ -107,7 +107,7 @@ const TestimonialsAndTrust = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {caseSnapshots.map((snapshot, index) => (
               <div key={index} className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
+                <CheckCircle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-1" />
                 <p className="text-blue-950">{snapshot}</p>
               </div>
             ))}

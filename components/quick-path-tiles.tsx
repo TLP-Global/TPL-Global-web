@@ -1,3 +1,4 @@
+"use client";
 import {
   Card,
   CardContent,
@@ -19,6 +20,7 @@ import {
   Flag,
 } from "lucide-react";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const QuickPathTiles = () => {
   const pathways = [
@@ -30,20 +32,23 @@ const QuickPathTiles = () => {
           title: "Visitor Visas (B-1/B-2)",
           description: "Short-term travel options and what to expect.",
           icon: Users,
-          link:"/services/individuals"
+          link: "/services/individuals",
+          photo:"/individuals/visitor-visa.png"
         },
         {
           title: "Permanent Residence",
           description: "Step-by-step pathways to permanent residence.",
           icon: CreditCard,
-          link:"/services/individuals"
+          link: "/services/individuals",
+          photo:"/individuals/perm-residence.png"
         },
         {
           title: "U.S. Citizenship",
           description:
             "Becoming a U.S. citizen and preparing for the interview.",
           icon: Flag,
-          link:"/services/individuals"
+          link: "/services/individuals",
+          photo:"/individuals/us-citizenship.png"
         },
       ],
     },
@@ -55,19 +60,22 @@ const QuickPathTiles = () => {
           title: "Spouse & Fiancé(e) (IR/CR-1, K-1, K-3)",
           description: "Marriage-based options explained simply.",
           icon: Heart,
-          link:"/services/families"
+          link: "/services/families",
+          photo:"/families/spouse.png"
         },
         {
           title: "Parents & Children",
           description: "Family petitions and who qualifies.",
           icon: Baby,
-          link:"/services/families"
+          link: "/services/families",
+          photo:"/families/parents.png"
         },
         {
           title: "Siblings",
           description: "How family preference categories work.",
           icon: UserPlus,
-          link:"/services/families"
+          link: "/services/families",
+          photo:"/families/siblings.png"
         },
       ],
     },
@@ -79,38 +87,43 @@ const QuickPathTiles = () => {
           title: "Asylum",
           description: "Protection if you fear harm in your home country.",
           icon: Shield,
-          link:"/services/humanitarian"
+          link: "/services/humanitarian",
+          photo:"/humanitarian/asylum.png"
         },
         {
           title: "U Visa",
           description: "For victims of certain crimes.",
           icon: Scale,
-          link:"/services/humanitarian"
+          link: "/services/humanitarian",
+          photo:"/humanitarian/u-visa.png"
         },
         {
           title: "T Visa",
           description: "For survivors of trafficking.",
           icon: HandHeart,
-          link:"/services/humanitarian"
+          link: "/services/humanitarian",
+          photo:"/humanitarian/t-visa.png"
         },
         {
           title: "VAWA",
           description: "Self-petition for victims of abuse.",
           icon: UserCheck,
-          link:"/services/humanitarian"
+          link: "/services/humanitarian",
+          photo:"/humanitarian/abuse.png"
         },
         {
           title: "SIJ",
           description: "Status for children facing hardship.",
           icon: Baby,
-          link:"/services/humanitarian"
+          link: "/services/humanitarian",
+          photo:"/humanitarian/sij.png"
         },
       ],
     },
   ];
 
   return (
-    <section className="max-w-7xl mx-auto bg-gradient-subtle">
+    <section className="max-w-7xl py-20 mx-auto bg-gradient-subtle">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-950">
@@ -134,37 +147,50 @@ const QuickPathTiles = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-8">
                 {pathway.items.map((item) => (
-                  <Card
+                  <motion.div
                     key={item.title}
-                    className="bg-gradient-to-br from-blue-100 to-blue-50 group h-48"
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    transition={{ duration: 0.5 }}
                   >
-                    <CardHeader className="pb-3">
-                      <div className="flex items-start gap-3">
-                        <item.icon className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                          <CardTitle className="text-lg mb-2">
-                            {item.title}
-                          </CardTitle>
-                          <CardDescription className="text-sm">
-                            {item.description}
-                          </CardDescription>
+                    <div className="relative h-44 w-full rounded-t-lg overflow-hidden">
+                      <img
+                        src={item.photo}
+                        alt=""
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/30"></div>
+                    </div>
+                    <Card className="bg-gradient-to-br rounded-t-none from-blue-200/40 to-blue-50/40 group h-44">
+                      <CardHeader className="">
+                        <div className="flex items-start gap-3">
+                          <item.icon className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                          <div>
+                            <CardTitle className="text-lg mb-2">
+                              {item.title}
+                            </CardTitle>
+                            <CardDescription className="text-sm">
+                              {item.description}
+                            </CardDescription>
+                          </div>
                         </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="pt-0">
-                      <Link href={item.link}>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full hover:bg-blue-950 hover:text-white group-hover:bg-blue-950 group-hover:text-primary-foreground transition-all duration-300"
-                      >
-                        Learn More
-                      </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
+                      </CardHeader>
+                      <CardContent className="pt-0">
+                        <Link href={item.link}>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="w-full hover:bg-blue-950 hover:text-white group-hover:bg-blue-950 group-hover:text-primary-foreground transition-all duration-300"
+                          >
+                            Learn More
+                          </Button>
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
                 ))}
               </div>
             </div>

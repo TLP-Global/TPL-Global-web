@@ -5,12 +5,13 @@ import { Phone } from "lucide-react";
 const About = () => {
   return (
     <main className="pt-20 ">
+      <img src="/hero.jpg" alt="" className="fixed bottom-0 -z-10 w-screen"/>
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-br from-blue-950/5 to-blue-50/10 ">
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-2xl mb-6">The Team Behind T.P.L. Global</h1>
-            <p className="text-xl text-blue-950/60">
+            <p className="text-xl text-white/80">
               Meet the dedicated professionals committed to your immigration
               success
             </p>
@@ -19,11 +20,11 @@ const About = () => {
       </section>
 
       {/* Attorney Tejas Patel Section */}
-      <section className="py-32">
+      <section className="py-32 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="text-lg mb-6">Meet Attorney Tejas Patel</h2>
+              <h2 className="text-2xl mb-6">Meet Attorney Tejas Patel</h2>
               <div className="space-y-4 text-blue-950/60">
                 <p>
                   Tejas Patel founded T.P.L. Global with a simple belief:
@@ -89,7 +90,7 @@ const About = () => {
       </section>
 
       {/* Approach to Practice */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold mb-8 text-center">
             Approach to Practice
@@ -170,7 +171,7 @@ const About = () => {
       </section>
 
       {/* Professional Highlights */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold mb-8 text-center">
             Professional Highlights
@@ -198,7 +199,7 @@ const About = () => {
       </section>
 
       {/* Why Clients Choose T.P.L. Global */}
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/10">
+      <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold text-blue-950 mb-8 text-center">
             Why Clients Choose T.P.L. Global
@@ -231,7 +232,7 @@ const About = () => {
       </section>
 
       {/* Next Step CTA */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="font-bold text-xl mb-6">Next Step</h3>
