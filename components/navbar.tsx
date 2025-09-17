@@ -1,9 +1,16 @@
-
 "use client";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Menu, ChevronDown, Phone } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,68 +24,475 @@ const Navbar = () => {
   ];
 
   return (
-      <header className="absolute py-4 bg-white top-0 left-0 right-0 z-50 ">
-        <div className="section-container max-w-7xl mx-auto ">
-          <div className="flex h-16 items-center justify-between px-4 md:px-0 lg:px-0">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <a href="/" className="text-xl font-bold">
-                <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
-              </a>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            {/* Desktop CTA */}
-            <div className="hidden md:flex">
-              <Button className="bg-gradient-to-r from-blue-950 to-blue-800">
-                <Phone className="mr-2 h-4 w-4" />
-                Book Consultation
-              </Button>
-            </div>
-
-            {/* Mobile Menu */}
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                  <Menu className="h-8 w-8 md:hidden" />
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[300px]">
-                <div className="flex flex-col gap-4 mt-8 px-4 pt-12">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
+    <header className="absolute py-4 bg-white top-0 left-0 right-0 z-50 ">
+      <div className="section-container max-w-7xl mx-auto ">
+        <div className="flex h-16 items-center justify-between px-4 md:px-0 lg:px-0">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <a href="/" className="text-xl font-bold">
+              <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
+            </a>
           </div>
-        </div>
-      {/* Mobile Bottom Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-primary p-4">
-        <Button className="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-primary font-semibold">
-          <Phone className="mr-2 h-4 w-4" />
-          Book Consultation
-        </Button>
-      </div>
-      </header>
 
+          {/* Desktop Navigation */}
+          <NavigationMenu className="hidden lg:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#"
+                  className="hover:text-primary transition-colors px-4 py-2"
+                >
+                  Home
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="hover:text-primary transition-colors">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-6 p-6 w-[800px] bg-background  rounded-md ">
+                    <div className="grid grid-cols-3 gap-6">
+                      <div>
+                        <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                          INDIVIDUALS
+                        </h4>
+                        <div className="space-y-2">
+                          <NavigationMenuLink
+                            href="/services/individuals"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Visitor Visas (B-1/B-2)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/individuals"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Green Cards (Overview)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/individuals"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            U.S. Citizenship & Naturalization
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                          FAMILIES
+                        </h4>
+                        <div className="space-y-2">
+                          <NavigationMenuLink
+                            href="/services/families"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Family-Based Immigration (Overview)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/families"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Spouse & Fiancé(e) (IR/CR-1, K-1, K-3)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/families"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Parents, Children & Siblings
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/families"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Remove Conditions (I-751)
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                          HUMANITARIAN
+                        </h4>
+                        <div className="space-y-2">
+                          <NavigationMenuLink
+                            href="/services/humanitarian"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            Asylum
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/humanitarian"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            U Visa (Victims of Crime)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/humanitarian"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            T Visa (Trafficking)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/humanitarian"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            VAWA (Self-Petition)
+                          </NavigationMenuLink>
+                          <NavigationMenuLink
+                            href="/services/humanitarian"
+                            className="block py-2 text-sm hover:text-primary transition-colors"
+                          >
+                            SIJ
+                          </NavigationMenuLink>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="hover:text-primary transition-colors">
+                  Resources
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[400px] bg-background rounded-md ">
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Start Here: Your U.S. Immigration Options
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="/faqs"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      FAQs
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Step-by-Step Guides & Checklists
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="/processing-times"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Processing Times & Priority Dates
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Forms & Document Templates
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Blog / Insights
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="hover:text-primary transition-colors">
+                  About
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[300px] bg-background rounded-md ">
+                    <NavigationMenuLink
+                      href="/about-us"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Our Firm
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="/about-us"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Attorney/Team Profiles
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Testimonials & Case Snapshots
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="hover:text-primary transition-colors">
+                  Consult
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid gap-3 p-6 w-[300px] bg-background rounded-md ">
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Book a Consultation
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Contact Us
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Office(s) & Hours
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                      href="#"
+                      className="block py-2 hover:text-primary transition-colors"
+                    >
+                      Global Clients (Virtual Consults)
+                    </NavigationMenuLink>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {/* Mobile Navigation */}
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="lg:hidden text-navy-foreground"
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <nav className="flex flex-col space-y-4">
+                <a
+                  href="#"
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  Home
+                </a>
+
+                <div className="space-y-3">
+                  <h3 className="text-lg font-medium">Services</h3>
+                  <div className="pl-4 space-y-4">
+                    <div>
+                      <h4 className="font-medium text-sm text-muted-foreground mb-2">
+                        INDIVIDUALS
+                      </h4>
+                      <div className="space-y-2 pl-2">
+                        <a
+                          href="/services/individuals"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Visitor Visas (B-1/B-2)
+                        </a>
+                        <a
+                          href="/services/individuals"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Green Cards (Overview)
+                        </a>
+                        <a
+                          href="/services/individuals"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          U.S. Citizenship & Naturalization
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-medium text-sm text-muted-foreground mb-2">
+                        FAMILIES
+                      </h4>
+                      <div className="space-y-2 pl-2">
+                        <a
+                          href="/services/families"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Family-Based Immigration
+                        </a>
+                        <a
+                          href="/services/families"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Spouse & Fiancé(e)
+                        </a>
+                        <a
+                          href="/services/families"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Parents, Children & Siblings
+                        </a>
+                        <a
+                          href="/services/families"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Remove Conditions (I-751)
+                        </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-medium text-sm text-muted-foreground mb-2">
+                        HUMANITARIAN
+                      </h4>
+                      <div className="space-y-2 pl-2">
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          Asylum
+                        </a>
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          U Visa (Victims of Crime)
+                        </a>
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          T Visa (Trafficking)
+                        </a>
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          VAWA (Self-Petition)
+                        </a>
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          SIJ
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-lg font-medium">Resources</h3>
+                  <div className="pl-4 space-y-2">
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Your U.S. Immigration Options
+                    </a>
+                    <a
+                      href="/faqs"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      FAQs
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Step-by-Step Guides
+                    </a>
+                    <a
+                      href="/processing-times"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Processing Times
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Forms & Templates
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Blog / Insights
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-lg font-medium">About</h3>
+                  <div className="pl-4 space-y-2">
+                    <a
+                      href="/about-us"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Our Firm
+                    </a>
+                    <a
+                      href="/about-us"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Attorney/Team Profiles
+                    </a>
+                    <a
+                      href="/about-us"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Testimonials
+                    </a>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <h3 className="text-lg font-medium">Consult</h3>
+                  <div className="pl-4 space-y-2">
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Book a Consultation
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Contact Us
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Office(s) & Hours
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-sm hover:text-primary transition-colors"
+                    >
+                      Global Clients
+                    </a>
+                  </div>
+                </div>
+              </nav>
+            </SheetContent>
+          </Sheet>
+
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+          >
+            <Phone className="mr-2 h-5 w-5" />
+            Book a Consultation
+          </Button>
+        </div>
+      </div>
+    </header>
   );
 };
 

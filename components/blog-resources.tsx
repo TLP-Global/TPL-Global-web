@@ -65,7 +65,63 @@ const BlogAndResources = () => {
   return (
     <section className="mx-auto max-w-7xl bg-gradient-subtle px-4 py-20">
       <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="flex flex-col gap-24">
+
+          {/* Resources Section */}
+          <div>
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-blue-950 mb-4">
+                Resources Spotlight
+              </h2>
+              <p className="text-blue-950/60">
+                Free guides and tools to help you navigate your immigration
+                journey.
+              </p>
+            </div>
+
+            <div className="space-x-12 flex">
+              {resources.map((resource) => (
+                <motion.div
+                  key={resource.title}
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.6 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card className="card-service justify-between flex flex-col w-96 h-60 group hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <CardHeader>
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="text-xs font-medium text-amber-600 bg-amber-500/10 px-2 py-1 rounded-full inline-block mb-2">
+                            {resource.type}
+                          </div>
+                          <CardTitle className="text-lg">
+                            {resource.title}
+                          </CardTitle>
+                          <CardDescription className="mt-1">
+                            {resource.description}
+                          </CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <Button
+                        size="sm"
+                        className="bg-gradient-to-r  from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all"
+                      >
+                        {resource.action === "Download" ? (
+                          <Download className="mr-2 h-4 w-4" />
+                        ) : (
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                        )}
+                        {resource.action}
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
           {/* Blog Section */}
           <div>
             <div className="mb-8">
@@ -86,7 +142,7 @@ const BlogAndResources = () => {
                   transition={{ duration: 0.5 }}
                   key={post.title}
                 >
-                  <Card className="card-professional group cursor-pointer hover:shadow-xl transition-all duration-300">
+                  <Card className="card-professional bg-secondary group cursor-pointer hover:shadow-xl transition-all duration-300">
                     <CardHeader>
                       <div className="flex items-center gap-2 text-sm text-blue-950/60 mb-2">
                         <Calendar className="h-4 w-4" />
@@ -101,9 +157,9 @@ const BlogAndResources = () => {
                     </CardHeader>
                     <CardContent>
                       <Button
-                        variant="ghost"
+                        variant="outline"
                         size="sm"
-                        className="group-hover:text-primary p-0"
+                        className="group-hover:bg-gradient-to-r from-blue-900 to-blue-700 hover:text-white group-hover:text-white p-0"
                       >
                         Read more
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -119,62 +175,6 @@ const BlogAndResources = () => {
                 <BookOpen className="mr-2 h-4 w-4" />
                 View All Blog Posts
               </Button>
-            </div>
-          </div>
-
-          {/* Resources Section */}
-          <div>
-            <div className="mb-8">
-              <h2 className="text-3xl font-bold text-blue-950 mb-4">
-                Resources Spotlight
-              </h2>
-              <p className="text-blue-950/60">
-                Free guides and tools to help you navigate your immigration
-                journey.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {resources.map((resource) => (
-                <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.6 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Card className="card-service group hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1">
-                          <div className="text-xs font-medium text-amber-600 bg-amber-500/10 px-2 py-1 rounded-full inline-block mb-2">
-                            {resource.type}
-                          </div>
-                          <CardTitle className="text-lg">
-                            {resource.title}
-                          </CardTitle>
-                          <CardDescription className="mt-1">
-                            {resource.description}
-                          </CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <Button
-                        size="sm"
-                        className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all"
-                      >
-                        {resource.action === "Download" ? (
-                          <Download className="mr-2 h-4 w-4" />
-                        ) : (
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                        )}
-                        {resource.action}
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
             </div>
           </div>
         </div>

@@ -3,8 +3,9 @@ import { Phone } from "lucide-react";
 
 const FAQs = () => {
   return (
-    <div className="min-h-screen px-4 py-20">
-      <main className="section-padding">
+    <div className="min-h-screen px-4 bg-white py-40">
+      <img src="/hero.jpg" alt="" className="fixed bottom-0 left-0 -z-10 w-screen"/>
+      <main className="section-padding ">
         <div className="section-container max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-16">

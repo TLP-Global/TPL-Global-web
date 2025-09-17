@@ -10,7 +10,7 @@ const About = () => {
       <section className="py-16 bg-gradient-to-br from-blue-950/5 to-blue-50/10 ">
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-2xl mb-6">The Team Behind T.P.L. Global</h1>
+            <h1 className="text-4xl mb-6">The Team Behind T.P.L. Global</h1>
             <p className="text-xl text-white/80">
               Meet the dedicated professionals committed to your immigration
               success
@@ -20,14 +20,14 @@ const About = () => {
       </section>
 
       {/* Attorney Tejas Patel Section */}
-      <section className="py-32 bg-white">
+      <section className="py-28 bg-white">
         <div className="section-container max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-12  items-center">
             <div>
-              <h2 className="text-2xl mb-6">Meet Attorney Tejas Patel</h2>
+              <h2 className="text-2xl mb-6">Meet Attorney Mr. Tejas G. Patel, Esq. </h2>
               <div className="space-y-4 text-blue-950/60">
                 <p>
-                  Tejas Patel founded T.P.L. Global with a simple belief:
+                  Mr. Tejas G. Patel, Esq. founded T.P.L. Global with a simple belief:
                   immigration clients deserve both sharp legal strategy and
                   genuine care. Known for his tenacity, creative
                   problem-solving, and clear communication, Tejas has helped
@@ -43,11 +43,11 @@ const About = () => {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-96 bg-secondary/20 rounded-lg flex items-center justify-center">
+              <div className="w-80 h-96 border border-black bg-secondary/20 rounded-lg flex items-center justify-center">
                 <img
                   src="/tejas-patel.jpg"
                   alt="Tejas Patel Profile Image"
-                  className="bg-muted-foreground"
+                  className="bg-muted-foreground h-full"
                 />
               </div>
             </div>

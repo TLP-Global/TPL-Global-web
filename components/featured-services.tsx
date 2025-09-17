@@ -111,9 +111,6 @@ const FeaturedServices = () => {
               <Card className="hover:shadow-xl transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-blue-950 rounded-lg">
-                      <service.icon className="h-6 w-6 text-primary-foreground" />
-                    </div>
                     <div>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
                       <CardDescription className="mt-1">

@@ -64,7 +64,7 @@ export default function Home() {
 
   return (
     <div className=" mx-auto w-screen">
-      <img src="/hero.jpg" alt="" className="fixed bottom-0 -z-10 w-screen"/>
+      <img src="/hero.jpg" alt="" className="fixed bottom-0 -z-10 w-screen" />
       <section className="relative">
         {/* Background video*/}
         <div className="relative min-h-screen flex items-center">
@@ -139,26 +139,32 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+          <div className="mt-6 text-center ">
+            <p className="text-white/80 text-sm">
+              Tejas G. Patel, Esq. has been practicing law since 2014. Mr. Tejas
+              founded TPL Global on November 5, 2020 with the purpose of helping
+              immigrants seek pathways to lawful status in the U.S.
+            </p>
+          </div>
         </div>
       </section>
       <section className="bg-background">
-        <QuickPathTiles/>
+        <QuickPathTiles />
       </section>
       <section className="mt-52 bg-background">
-        <HowWeWork/>
+        <HowWeWork />
       </section>
       <section className="mt-52 bg-background">
-        <FeaturedServices/>
+        <FeaturedServices />
       </section>
       <section className="mt-52 bg-background">
-        <TestimonialsAndTrust/>
+        <TestimonialsAndTrust />
       </section>
       <section className="mt-52 bg-background">
-        <BlogAndResources/>
+        <BlogAndResources />
       </section>
       <section className=" bg-background">
-        <FinalCTA/>
+        <FinalCTA />
       </section>
     </div>
   );

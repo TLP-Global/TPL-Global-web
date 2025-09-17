@@ -26,7 +26,7 @@ const Footer = () => {
               and careful execution for individuals and families worldwide.
             </p>
             <div className="text-background/70 text-sm">
-              <p>Tejas Patel, Esq.</p>
+              <p>Mr. Tejas G. Patel, Esq.</p>
               <p>11 Years Experience Since 2014</p>
               <p>TPL Global - Founded November 2020</p>
             </div>
