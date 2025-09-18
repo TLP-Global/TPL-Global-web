@@ -20,7 +20,6 @@ import {
   Flag,
 } from "lucide-react";
 import Link from "next/link";
-import { motion } from "motion/react";
 
 const QuickPathTiles = () => {
   const pathways = [
@@ -135,12 +134,12 @@ const QuickPathTiles = () => {
         </div>
 
         {/* Horizontal pathway sections */}
-        <div className="flex gap-44 justify-center mb-12">
+        <div className="flex gap-4 md:gap-44 justify-center md:mb-12">
           {pathways.map((pathway, pathwayIndex) => (
             <div key={pathway.category} className="text-center">
               <div className="flex flex-col items-center mb-6">
                 <div className="p-4 bg-blue-950 rounded-full mb-3 shadow-lg">
-                  <pathway.icon className="h-8 w-8 text-primary-foreground" />
+                  <pathway.icon className="md:h-8 md:w-8 h-4 w-4 text-primary-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-blue-950">
                   {pathway.category}
@@ -160,10 +159,13 @@ const QuickPathTiles = () => {
 
                       {/* Timeline dot */}
                       <div className="flex gap-2">
+                        <Link href={item.link} className="flex gap-2">
+
                         <div className="w-4 h-4 bg-primary rounded-full border-2 border-background shadow-lg cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-xl" />
                         <span className="text-xs text-muted-foreground max-w-28">
                           {item.title}
                         </span>
+                        </Link>
                       </div>
 
                       {/* Hover card */}

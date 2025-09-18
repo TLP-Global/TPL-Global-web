@@ -8,11 +8,17 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Users, CreditCard, Flag, Phone, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 const Individuals = () => {
   return (
-    <div className="min-h-screen px-4">
-      <main className="py-16 md:py-24">
+    <div className="min-h-screen px-4 bg-white">
+      <img
+        src="/hero.jpg"
+        alt=""
+        className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
+      />
+      <main className="py-44">
         <div className="section-container max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -30,7 +36,7 @@ const Individuals = () => {
           {/* Services Grid */}
           <div className="grid gap-12 lg:gap-16">
             {/* Visitor Visas */}
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="visitor-visas">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -100,7 +106,7 @@ const Individuals = () => {
             </Card>
 
             {/* Green Cards */}
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="green-cards">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -176,7 +182,7 @@ const Individuals = () => {
             </Card>
 
             {/* U.S. Citizenship */}
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="us-citizenship">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -286,13 +292,18 @@ const Individuals = () => {
               Next Step
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              <Link
+                href="/consult"
+                className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Book a Consultation
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Book a Consultation
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Start Here – Free Guides

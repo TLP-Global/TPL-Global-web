@@ -18,6 +18,7 @@ import HowWeWork from "@/components/how-we-work";
 import TestimonialsAndTrust from "@/components/testimonials";
 import BlogAndResources from "@/components/blog-resources";
 import FinalCTA from "@/components/final-cta";
+import Link from "next/link";
 
 export default function Home() {
   const items = [
@@ -64,7 +65,11 @@ export default function Home() {
 
   return (
     <div className=" mx-auto w-screen">
-      <img src="/hero.jpg" alt="" className="fixed bottom-0 -z-10 w-screen" />
+      <img
+        src="/hero.jpg"
+        alt=""
+        className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
+      />
       <section className="relative">
         {/* Background video*/}
         <div className="relative min-h-screen flex items-center">
@@ -91,13 +96,18 @@ export default function Home() {
               citizenship. Practical advice. Careful execution
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              <Link
+                href="/consult"
+                className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Book a Consultation
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Book a Consultation
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Start Here – Free Guides
@@ -106,7 +116,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-12 bg-black/20">
+      <section className="py-12 bg-blue-950 md:bg-black/20">
         <div className="section-container">
           <div className="flex flex-col max-w-7xl mx-auto lg:flex-row items-center justify-between gap-8">
             {/* Government Logos */}
@@ -151,19 +161,19 @@ export default function Home() {
       <section className="bg-background">
         <QuickPathTiles />
       </section>
-      <section className="mt-52 bg-background">
+      <section className="md:mt-52 mt-28 bg-background">
         <HowWeWork />
       </section>
-      <section className="mt-52 bg-background">
+      <section className="md:mt-52 mt-28 bg-background">
         <FeaturedServices />
       </section>
-      <section className="mt-52 bg-background">
+      <section className="md:mt-52 mt-28 bg-background">
         <TestimonialsAndTrust />
       </section>
-      <section className="mt-52 bg-background">
+      <section className="md:mt-52 mt-28 bg-background">
         <BlogAndResources />
       </section>
-      <section className=" bg-background">
+      <section className="md:mt-52 mt-28 bg-background">
         <FinalCTA />
       </section>
     </div>

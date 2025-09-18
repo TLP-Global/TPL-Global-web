@@ -16,11 +16,17 @@ import {
   Shield,
   AlertTriangle,
 } from "lucide-react";
+import Link from "next/link";
 
 const Humanitarian = () => {
   return (
-    <div className="min-h-screen px-4">
-      <main className="py-16 md:py-24">
+    <div className="min-h-screen px-4 bg-white">
+      <img
+        src="/hero.jpg"
+        alt=""
+        className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
+      />
+      <main className="py-44">
         <div className="section-container max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -37,8 +43,8 @@ const Humanitarian = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid gap-12 lg:gap-16">
-            <Card className="p-8">
+          <div className="space-y-12  lg:gap-16">
+            <Card className="md:p-8 py-4 " id="asylum">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -76,14 +82,14 @@ const Humanitarian = () => {
                   </div>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We help clients prepare strong, well-documented applications
                   while protecting their privacy and dignity.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="u-visa">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -117,14 +123,14 @@ const Humanitarian = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We work carefully with survivors to gather evidence while
                   keeping safety at the center of the process.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="t-visa">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -157,14 +163,14 @@ const Humanitarian = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   Our role is to help survivors present their story clearly and
                   confidentially so they can secure stability and safety.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="vawa">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -199,14 +205,14 @@ const Humanitarian = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We approach these cases with sensitivity, ensuring your
                   application is secure and private.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="sij">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -237,10 +243,10 @@ const Humanitarian = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We guide families and guardians through the legal and court
                   steps needed to protect vulnerable children.
-                </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -294,6 +300,10 @@ const Humanitarian = () => {
               Next Step
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/consult"
+                  className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                >
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
@@ -301,6 +311,7 @@ const Humanitarian = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Book a Consultation
               </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Start Here – Free Guides

@@ -8,11 +8,13 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Users, CreditCard, Flag, Phone, BookOpen } from "lucide-react";
+import Link from "next/link";
 
 const Families = () => {
   return (
-    <div className="min-h-screen px-4">
-      <main className="py-16 md:py-24">
+    <div className="min-h-screen px-4 bg-white">
+      <img src="/hero.jpg" alt="" className="hidden md:block fixed bottom-0 -z-10  w-screen left-0" />
+      <main className="py-44">
         <div className="section-container max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
@@ -27,10 +29,9 @@ const Families = () => {
             </p>
           </div>
 
-          <div className="grid gap-12 lg:gap-16">
-            {/* Visitor Visas */}
-            <Card className="p-8">
-              <CardHeader className="pb-6">
+          <div className="space-y-12  lg:gap-16">
+            <Card className="md:p-8 py-4 " id="spouse">
+              <CardHeader className="">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
                     <Users className="h-8 w-8 text-primary-foreground" />
@@ -91,15 +92,15 @@ const Families = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We’ll guide you on which option makes sense based on your
                   timeline, location, and long-term plans.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
-              <CardHeader className="pb-6">
+            <Card className="md:p-8 py-4 ">
+              <CardHeader className="" id="parents">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
                     <Users className="h-8 w-8 text-primary-foreground" />
@@ -158,14 +159,14 @@ const Families = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   Understanding who qualifies and how long it may take is
                   critical for planning family reunification.
-                </Button>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="p-8">
+            <Card className="md:p-8 py-4 " id="conditions">
               <CardHeader className="pb-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-blue-950 rounded-lg">
@@ -203,11 +204,11 @@ const Families = () => {
                   </ul>
                 </div>
 
-                <Button className="bg-gradient-to-r from-blue-950 to-blue-800 w-full group-hover:shadow-lg transition-all">
+                <div className="text-center bg-gradient-to-r from-blue-950 to-blue-800 w-full rounded-lg p-4 text-white shadow-lg">
                   We help clients prepare clear, well-documented I-751 petitions
                   especially important if there are complications like divorce,
                   separation, or limited proof.
-                </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -261,6 +262,10 @@ const Families = () => {
               Next Step
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/consult"
+            className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+          >
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
@@ -268,6 +273,7 @@ const Families = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Book a Consultation
               </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Start Here – Free Guides

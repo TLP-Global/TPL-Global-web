@@ -11,6 +11,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ChevronDown, Phone } from "lucide-react";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,19 +60,19 @@ const Navbar = () => {
                         </h4>
                         <div className="space-y-2">
                           <NavigationMenuLink
-                            href="/services/individuals"
+                            href="/services/individuals#visitor-visas"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Visitor Visas (B-1/B-2)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/individuals"
+                            href="/services/individuals#green-cards"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Green Cards (Overview)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/individuals"
+                            href="/services/individuals#us-citizenship"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             U.S. Citizenship & Naturalization
@@ -85,25 +86,19 @@ const Navbar = () => {
                         </h4>
                         <div className="space-y-2">
                           <NavigationMenuLink
-                            href="/services/families"
-                            className="block py-2 text-sm hover:text-primary transition-colors"
-                          >
-                            Family-Based Immigration (Overview)
-                          </NavigationMenuLink>
-                          <NavigationMenuLink
-                            href="/services/families"
+                            href="/services/families#spouse"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Spouse & Fiancé(e) (IR/CR-1, K-1, K-3)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/families"
+                            href="/services/families#parents"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Parents, Children & Siblings
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/families"
+                            href="/services/families#conditions"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Remove Conditions (I-751)
@@ -117,31 +112,31 @@ const Navbar = () => {
                         </h4>
                         <div className="space-y-2">
                           <NavigationMenuLink
-                            href="/services/humanitarian"
+                            href="/services/humanitarian#asylum"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             Asylum
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/humanitarian"
+                            href="/services/humanitarian#u-visa"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             U Visa (Victims of Crime)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/humanitarian"
+                            href="/services/humanitarian#t-visa"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             T Visa (Trafficking)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/humanitarian"
+                            href="/services/humanitarian#vawa"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             VAWA (Self-Petition)
                           </NavigationMenuLink>
                           <NavigationMenuLink
-                            href="/services/humanitarian"
+                            href="/services/humanitarian#sij"
                             className="block py-2 text-sm hover:text-primary transition-colors"
                           >
                             SIJ
@@ -190,7 +185,7 @@ const Navbar = () => {
                       Forms & Document Templates
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      href="#"
+                      href="/blog"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Blog / Insights
@@ -234,13 +229,13 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[300px] bg-background rounded-md ">
                     <NavigationMenuLink
-                      href="#"
+                      href="/consult"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Book a Consultation
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      href="#"
+                      href="contact"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Contact Us
@@ -418,7 +413,7 @@ const Navbar = () => {
                       Forms & Templates
                     </a>
                     <a
-                      href="#"
+                      href="/blog"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       Blog / Insights
@@ -454,7 +449,7 @@ const Navbar = () => {
                   <h3 className="text-lg font-medium">Consult</h3>
                   <div className="pl-4 space-y-2">
                     <a
-                      href="#"
+                      href="/consult"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       Book a Consultation
@@ -483,13 +478,18 @@ const Navbar = () => {
             </SheetContent>
           </Sheet>
 
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+          <Link
+            href="/consult"
+            className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
           >
-            <Phone className="mr-2 h-5 w-5" />
-            Book a Consultation
-          </Button>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Book a Consultation
+            </Button>
+          </Link>
         </div>
       </div>
     </header>

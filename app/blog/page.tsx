@@ -1,0 +1,323 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  ArrowRight,
+  Users,
+  FileText,
+  Heart,
+  Clock,
+  CheckCircle,
+  Calendar,
+  User,
+  Phone,
+  BookOpen,
+} from "lucide-react";
+import Link from "next/link";
+
+const blogPosts = [
+  {
+    id: 1,
+    title:
+      "Complete Guide to B-1/B-2 Visitor Visas: Everything You Need to Know",
+    excerpt:
+      "Learn about eligibility requirements, application process, and what you can and cannot do on a B-1/B-2 visitor visa to the United States.",
+    category: "Visitor Visas",
+    author: "Sarah Martinez, Esq.",
+    date: "December 15, 2024",
+    readTime: "8 min read",
+    image: "/us-visa-application-documents-on-desk.jpg",
+    tags: ["B-1", "B-2", "Tourism", "Business"],
+  },
+  {
+    id: 2,
+    title: "Understanding B-1 Business Visa Requirements and Restrictions",
+    excerpt:
+      "Detailed breakdown of B-1 business visa eligibility, permitted activities, and common reasons for denial.",
+    category: "Visitor Visas",
+    author: "Michael Chen, Esq.",
+    date: "December 12, 2024",
+    readTime: "6 min read",
+    image: "/business-meeting-handshake-professional.jpg",
+    tags: ["B-1", "Business", "Requirements"],
+  },
+  {
+    id: 3,
+    title: "B-2 Tourist Visa: Planning Your Visit to the United States",
+    excerpt:
+      "Essential information for tourists applying for B-2 visas, including documentation, interview tips, and duration of stay.",
+    category: "Visitor Visas",
+    author: "Lisa Rodriguez, Esq.",
+    date: "December 10, 2024",
+    readTime: "7 min read",
+    image: "/tourist-family-visiting-us-landmarks.jpg",
+    tags: ["B-2", "Tourism", "Travel"],
+  },
+  {
+    id: 4,
+    title: "I-130 Family Petition Process: Step-by-Step Guide",
+    excerpt:
+      "Complete walkthrough of filing Form I-130 to petition for family members, including required documents and processing times.",
+    category: "Family Immigration",
+    author: "David Kim, Esq.",
+    date: "December 8, 2024",
+    readTime: "10 min read",
+    image: "/family-reunion-immigration-documents.jpg",
+    tags: ["I-130", "Family", "Petition"],
+  },
+  {
+    id: 5,
+    title:
+      "Consular Processing vs. Adjustment of Status: Which Path is Right for You?",
+    excerpt:
+      "Compare the two main pathways for obtaining permanent residence and learn which option best fits your situation.",
+    category: "Family Immigration",
+    author: "Jennifer Park, Esq.",
+    date: "December 5, 2024",
+    readTime: "9 min read",
+    image: "/us-consulate-building-and-green-card.jpg",
+    tags: ["Consular Processing", "Adjustment of Status", "Green Card"],
+  },
+  {
+    id: 6,
+    title: "Family Immigration Timelines: What to Expect in 2024",
+    excerpt:
+      "Current processing times for family-based immigration petitions and factors that can affect your case timeline.",
+    category: "Family Immigration",
+    author: "Robert Thompson, Esq.",
+    date: "December 3, 2024",
+    readTime: "5 min read",
+    image: "/calendar-timeline-immigration-process.jpg",
+    tags: ["Timeline", "Processing Times", "Family"],
+  },
+  {
+    id: 7,
+    title: "Asylum in the United States: Understanding Your Rights and Options",
+    excerpt:
+      "Comprehensive guide to asylum eligibility, application process, and what to expect during your asylum case.",
+    category: "Humanitarian Options",
+    author: "Maria Gonzalez, Esq.",
+    date: "November 30, 2024",
+    readTime: "12 min read",
+    image: "/diverse-people-seeking-protection-and-safety.jpg",
+    tags: ["Asylum", "Protection", "Rights"],
+  },
+  {
+    id: 8,
+    title:
+      "Temporary Protected Status (TPS): Current Designations and How to Apply",
+    excerpt:
+      "Latest updates on TPS designations and step-by-step application process for eligible nationals.",
+    category: "Humanitarian Options",
+    author: "Ahmed Hassan, Esq.",
+    date: "November 28, 2024",
+    readTime: "8 min read",
+    image: "/world-map-showing-countries-with-humanitarian-cris.jpg",
+    tags: ["TPS", "Temporary Protection", "Humanitarian"],
+  },
+  {
+    id: 9,
+    title:
+      "VAWA and U-Visa: Protection for Victims of Crime and Domestic Violence",
+    excerpt:
+      "Understanding immigration relief options for victims of domestic violence, sexual assault, and other qualifying crimes.",
+    category: "Humanitarian Options",
+    author: "Catherine Williams, Esq.",
+    date: "November 25, 2024",
+    readTime: "11 min read",
+    image: "/supportive-hands-offering-help-and-protection.jpg",
+    tags: ["VAWA", "U-Visa", "Victim Protection"],
+  },
+];
+
+export default function BlogSection() {
+  return (
+    <div className="bg-background">
+      <img
+        src="/hero.jpg"
+        alt=""
+        className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
+      />
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4 text-foreground">
+                Latest Immigration Insights
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Stay informed with our expert analysis and practical guides on
+                U.S. immigration law
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blogPosts.map((post) => (
+                <Card
+                  key={post.id}
+                  className="group hover:shadow-lg pt-0 transition-all duration-300 overflow-hidden"
+                >
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={post.image || "/placeholder.svg"}
+                      alt={post.title}
+                      className="w-full h-full top-0 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge
+                        variant="secondary"
+                        className="bg-blue-950 text-primary-foreground text-xs"
+                      >
+                        {post.category}
+                      </Badge>
+                      <span className="text-xs text-muted-foreground">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <CardTitle className="text-lg text-blue-950 font-bold group-hover:text-primary transition-colors line-clamp-2">
+                      {post.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
+                      <User className="h-3 w-3" />
+                      <span>{post.author}</span>
+                      <span>•</span>
+                      <Calendar className="h-3 w-3" />
+                      <span>{post.date}</span>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {post.tags.slice(0, 3).map((tag) => (
+                        <Badge key={tag} variant="outline" className="text-xs">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full group-hover:bg-blue-950 group-hover:text-primary-foreground transition-colors bg-transparent"
+                    >
+                      Read Article
+                      <ArrowRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                variant="outline"
+                className="px-8 bg-transparent"
+              >
+                View All Blog Posts
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Call to Action Section */}
+          <div className="mt-20 bg-secondary text-primary-foreground rounded-2xl p-8 md:p-12 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-2xl md:text-3xl text-blue-950 font-bold mb-4">
+                Ready to Start Your Immigration Journey?
+              </h3>
+              <p className="text-lg mb-8 text-blue-950/60 text-pretty">
+                Our experienced immigration attorneys are here to guide you
+                through every step of the process. Schedule your consultation
+                today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/consult"
+                  className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                  >
+                    <Phone className="mr-2 h-5 w-5" />
+                    Book a Consultation
+                  </Button>
+                </Link>
+                <Button variant="outline" size="lg" className="text-black">
+                  <BookOpen className="mr-2 h-5 w-5" />
+                  Start Here – Free Guides
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Recent Updates Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-8 text-center">
+              Recent Immigration Updates
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <Clock className="h-4 w-4" />
+                    <span>December 2024</span>
+                  </div>
+                  <CardTitle className="text-lg">
+                    New B-1/B-2 Processing Guidelines
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    USCIS has updated processing guidelines for visitor visas,
+                    affecting documentation requirements and interview
+                    procedures.
+                  </p>
+                  <Button variant="outline" size="sm">
+                    Read More
+                    <ArrowRight className="h-4 w-4 ml-1" />
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                    <Clock className="h-4 w-4" />
+                    <span>November 2024</span>
+                  </div>
+                  <CardTitle className="text-lg">
+                    Family Immigration Priority Date Updates
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground mb-4">
+                    The latest visa bulletin shows significant movement in
+                    family-based immigration categories for several countries.
+                  </p>
+                  <Button variant="outline" size="sm">
+                    Read More
+                    <ArrowRight className="h-4 w-4 ml-1" />
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
