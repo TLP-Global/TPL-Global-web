@@ -40,7 +40,7 @@ const Navbar = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="/"
                   className="hover:text-primary transition-colors px-4 py-2"
                 >
                   Home
@@ -195,65 +195,21 @@ const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-primary transition-colors">
-                  About
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[300px] bg-background rounded-md ">
-                    <NavigationMenuLink
-                      href="/about-us"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Our Firm
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="/about-us"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Attorney/Team Profiles
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="#"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Testimonials & Case Snapshots
-                    </NavigationMenuLink>
-                  </div>
-                </NavigationMenuContent>
+                <NavigationMenuLink
+                  href="/about-us"
+                  className="hover:text-primary transition-colors px-4 py-2"
+                >
+                 About 
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="hover:text-primary transition-colors">
-                  Consult
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid gap-3 p-6 w-[300px] bg-background rounded-md ">
-                    <NavigationMenuLink
-                      href="/consult"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Book a Consultation
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="contact"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Contact Us
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="#"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Office(s) & Hours
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="#"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Global Clients (Virtual Consults)
-                    </NavigationMenuLink>
-                  </div>
-                </NavigationMenuContent>
+                <NavigationMenuLink
+                  href="/contact"
+                  className="hover:text-primary transition-colors px-4 py-2"
+                >
+                 Contact us
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

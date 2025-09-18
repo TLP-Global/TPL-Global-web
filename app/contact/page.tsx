@@ -230,16 +230,11 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-8">
+          <div className="grid lg:grid-cols-2 gap-8 mb-8">
             <Card className="text-center">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg text-card-foreground mb-2">
-                  Cleveland Office
-                </h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  11100 Euclid Ave, Suite #2700
-                  <br />
-                  Cleveland, OH 44106
+                  100 Tradecenter Dr., Suite G700, Woburn, MA 01801
                 </p>
                 <Button variant="outline" size="sm">
                   Get Directions
@@ -249,29 +244,9 @@ export default function ContactPage() {
 
             <Card className="text-center">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg text-card-foreground mb-2">
-                  Bellevue Office
-                </h3>
                 <p className="text-muted-foreground text-sm mb-4">
-                  2210 E 24th Ave, Ste #117
-                  <br />
-                  Bellevue, WA 98005
-                </p>
-                <Button variant="outline" size="sm">
-                  Get Directions
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg text-card-foreground mb-2">
-                  Visakhapatnam Office
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  Peddapuram Marg
-                  <br />
-                  Visakhapatnam, 530054
+                   Sankalp square 3B, office 1217, Sindhu Bhavan Marg.,
+                  Ahmedabad, Gujarat 380058
                 </p>
                 <Button variant="outline" size="sm">
                   Get Directions
