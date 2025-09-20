@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone } from "lucide-react";
@@ -8,6 +9,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 const teamMembers = [
   {
@@ -46,17 +49,24 @@ const teamMembers = [
 const About = () => {
   return (
     <main className="pt-20 ">
+      <NextSeo
+        title="About Us"
+        description="Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys."
+        canonical="https://tplglobal.net/about-us"
+      />
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
       />
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-950/5 to-blue-50/10 ">
+      <section className="py-24 bg-gradient-to-br from-blue-950/5 to-blue-50/10 ">
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl mb-6">The Team Behind T.P.L. Global</h1>
-            <p className="text-xl text-white/80">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
+              The Team Behind T.P.L. Global
+            </h1>
+            <p className="text-base lg:text-white/80 text-blue-950/60">
               Meet the dedicated professionals committed to your immigration
               success
             </p>
@@ -65,7 +75,7 @@ const About = () => {
       </section>
 
       {/* Attorney Tejas Patel Section */}
-      <section className="py-28 bg-white">
+      <section className="py-28 p-4 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12  items-center">
             <div>
@@ -143,7 +153,7 @@ const About = () => {
             Approach to Practice
           </h3>
           <p className="text-center text-blue-950/60 mb-8">Tejas brings:</p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 px-4">
             <Card className="bg-gradient-to-br from-blue-50 to-white border border-blue-950/20 rounded-lg p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 text-center">
               <CardContent className="p-6">
                 <h4 className="font-semibold text-lg mb-3">
@@ -187,7 +197,7 @@ const About = () => {
       </section>
 
       {/* Languages and Global Perspective */}
-      <section className="py-32 bg-gradient-to-br from-blue-950/5 to-blue-50/10  ">
+      <section className="py-32 bg-gradient-to-br from-blue-950/5 to-blue-50/10 px-4">
         <div className="section-container max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12">
             <Card className="card-professional">
@@ -218,7 +228,7 @@ const About = () => {
       </section>
 
       {/* Professional Highlights */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white px-4">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold mb-8 text-center">
             Professional Highlights
@@ -342,13 +352,18 @@ const About = () => {
               If you're ready to take the next step in your immigration journey,
               we'd be honored to guide you.
             </p>
-            <Button
-              className="bg-gradient-to-r from-blue-950 to-blue-800 flex-1"
-              size="lg"
+            <Link
+              href="/consult"
+              className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
             >
-              <Phone className="mr-2 h-4 w-4" />
-              Book Consultation
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800 group-hover:shadow-lg transition-all"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Book a Consultation
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

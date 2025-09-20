@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,13 +10,19 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Users, CreditCard, Flag, Phone, BookOpen } from "lucide-react";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 const Individuals = () => {
   return (
     <div className="min-h-screen px-4 bg-white">
+      <NextSeo
+        title="Our Immigration Services for Individuals"
+        description="Explore our immigration services, including visa applications, green cards, work permits, and citizenship support."
+        canonical="https://tplglobal.net/services/individuals"
+      />
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
       />
       <main className="py-44">
@@ -298,7 +305,7 @@ const Individuals = () => {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                  className="bg-transparent  group-hover:shadow-lg transition-all"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Consultation

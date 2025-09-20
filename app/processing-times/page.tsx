@@ -2,10 +2,14 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 
-const FAQs = () => {
+const ProcessingTimes = () => {
   return (
     <div className="min-h-screen px-4 bg-white py-40">
-      <img src="/hero.jpg" alt="" className="hidden md:block fixed bottom-0 -z-10  w-screen left-0" />
+      <img
+        src="/hero.jpg"
+        alt="Notary seal stamping official legal documents"
+        className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
+      />
       <main className="section-padding ">
         <div className="section-container max-w-7xl mx-auto">
           {/* Header Section */}
@@ -123,17 +127,17 @@ const FAQs = () => {
               priority date means—we can walk you through it during a
               consultation.
             </p>
-          <Link
-            href="/consult"
-            className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
-          >
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+            <Link
+              href="/consult"
+              className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
             >
-              <Phone className="mr-2 h-5 w-5" />
-              Book a Consultation
-            </Button>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Book a Consultation
+              </Button>
             </Link>
           </div>
         </div>
@@ -142,4 +146,4 @@ const FAQs = () => {
   );
 };
 
-export default FAQs;
+export default ProcessingTimes;

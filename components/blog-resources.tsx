@@ -79,7 +79,7 @@ const BlogAndResources = () => {
               </p>
             </div>
 
-            <div className="space-x-12 flex">
+            <div className="md:space-x-12 items-center  flex flex-col md:flex-row space-y-4">
               {resources.map((resource) => (
                 <motion.div
                   key={resource.title}

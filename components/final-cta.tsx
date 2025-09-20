@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Phone, BookOpen, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const FinalCTA = () => {
   return (
@@ -17,6 +18,10 @@ const FinalCTA = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <div className="text-center">
+              <Link
+                href="/consult"
+                className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              >
               <Button  
                 size="lg" 
                 variant="outline" 
@@ -24,6 +29,7 @@ const FinalCTA = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Book Consultation
               </Button>
+              </Link>
               <p className="text-primary-foreground/80 text-sm">
                 Speak with an expert today
               </p>

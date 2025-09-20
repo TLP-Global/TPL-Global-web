@@ -141,7 +141,7 @@ export default function BlogSection() {
     <div className="bg-background">
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
       />
       <section className="py-16 px-4">

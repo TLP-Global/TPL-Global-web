@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { NextSeo } from "next-seo";
 
 const ContactForm = () => {
   useEffect(() => {
@@ -12,10 +13,14 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-white py-44 px-4">
-
+      <NextSeo
+        title="Book a Consultation"
+        description="Schedule a consultation with TPL Global immigration lawyers to discuss your case and options."
+        canonical="https://tplglobal.net/consult"
+      />
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
       />
 

@@ -1,6 +1,13 @@
+"use client"
+import { NextSeo } from "next-seo";
 const TermsOfUse = () => {
   return (
     <div>
+      <NextSeo
+        title="Terms of Use"
+        description="Review the terms of use for accessing and using TPL Global Immigration Law Firm's website and services."
+        canonical="https://tplglobal.net/terms-of-use"
+      />
       <main className="section-container max-w-7xl mx-auto py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Terms of Use</h1>

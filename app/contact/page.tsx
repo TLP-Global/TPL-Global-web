@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, BookOpen } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -36,9 +37,14 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background py-32">
+<NextSeo
+  title="Contact Us"
+  description="Get in touch with TPL Global Immigration Law Firm for immigration legal advice and assistance."
+  canonical="https://tplglobal.net/contact"
+/>
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
       />
 

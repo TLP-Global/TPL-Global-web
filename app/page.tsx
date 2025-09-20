@@ -67,7 +67,7 @@ export default function Home() {
     <div className=" mx-auto w-screen">
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
       />
       <section className="relative">
@@ -102,7 +102,7 @@ export default function Home() {
               >
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+                  className="bg-transparent group-hover:shadow-lg transition-all"
                 >
                   <Phone className="mr-2 h-5 w-5" />
                   Book a Consultation

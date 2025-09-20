@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,13 +18,19 @@ import {
   AlertTriangle,
 } from "lucide-react";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 const Humanitarian = () => {
   return (
     <div className="min-h-screen px-4 bg-white">
+      <NextSeo
+        title="Our Immigration Services for Humanitarian"
+        description="Explore our immigration services, including visa applications, green cards, work permits, and citizenship support."
+        canonical="https://tplglobal.net/services/humanitarian"
+      />
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block fixed bottom-0 -z-10  w-screen left-0"
       />
       <main className="py-44">
@@ -300,17 +307,17 @@ const Humanitarian = () => {
               Next Step
             </h3>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/consult"
-                  className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
-                >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
+              <Link
+                href="/consult"
+                className="bg-gradient-to-r rounded-md from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
               >
-                <Phone className="mr-2 h-5 w-5" />
-                Book a Consultation
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-transparent  group-hover:shadow-lg transition-all"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Book a Consultation
+                </Button>
               </Link>
               <Button variant="outline" size="lg">
                 <BookOpen className="mr-2 h-5 w-5" />

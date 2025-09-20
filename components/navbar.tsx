@@ -226,9 +226,9 @@ const Navbar = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col p-4 space-y-4">
                 <a
-                  href="#"
+                  href="/"
                   className="text-lg font-medium hover:text-primary transition-colors"
                 >
                   Home
@@ -377,59 +377,18 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">About</h3>
-                  <div className="pl-4 space-y-2">
-                    <a
-                      href="/about-us"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Our Firm
-                    </a>
-                    <a
-                      href="/about-us"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Attorney/Team Profiles
-                    </a>
-                    <a
-                      href="/about-us"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Testimonials
-                    </a>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <h3 className="text-lg font-medium">Consult</h3>
-                  <div className="pl-4 space-y-2">
-                    <a
-                      href="/consult"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Book a Consultation
-                    </a>
-                    <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Contact Us
-                    </a>
-                    <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Office(s) & Hours
-                    </a>
-                    <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Global Clients
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href="/about-us"
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  About Us
+                </a>
+                <a
+                  href="/contact"
+                  className="text-lg font-medium hover:text-primary transition-colors"
+                >
+                  Contact Us
+                </a>
               </nav>
             </SheetContent>
           </Sheet>

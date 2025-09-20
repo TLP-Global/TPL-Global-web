@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -7,6 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { BookOpen, Phone } from "lucide-react";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
 
 const FAQs = () => {
   const generalFAQs = [
@@ -100,9 +102,14 @@ const FAQs = () => {
 
   return (
     <div className="min-h-screen px-4 py-40 bg-white">
+      <NextSeo
+        title="Immigration FAQs"
+        description="Answers to frequently asked questions about visas, green cards, and citizenship applications."
+        canonical="https://tplglobal.net/faqs"
+      />
       <img
         src="/hero.jpg"
-        alt=""
+        alt="Notary seal stamping official legal documents"
         className="hidden md:block  fixed bottom-0 -z-10 w-screen left-0"
       />
       <main className="section-padding">
