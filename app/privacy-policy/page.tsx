@@ -1,14 +1,16 @@
-"use client"
-import { NextSeo } from "next-seo";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Read our privacy policy to understand how we protect client data and personal information.",
+  alternates: {
+    canonical: "https://tplglobal.net/privacy-policy",
+  },
+};
 
 const PrivacyPolicy = () => {
   return (
     <div>
-      <NextSeo
-        title="Privacy Policy"
-        description="Read our privacy policy to understand how we protect client data and personal information."
-        canonical="https://tplglobal.net/privacy-policy"
-      />
       <main className="section-container mx-auto max-w-7xl py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>

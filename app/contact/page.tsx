@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,7 +8,6 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, BookOpen } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -37,11 +35,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-background py-32">
-<NextSeo
-  title="Contact Us"
-  description="Get in touch with TPL Global Immigration Law Firm for immigration legal advice and assistance."
-  canonical="https://tplglobal.net/contact"
-/>
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"
@@ -251,7 +244,7 @@ export default function ContactPage() {
             <Card className="text-center">
               <CardContent className="pt-6">
                 <p className="text-muted-foreground text-sm mb-4">
-                   Sankalp square 3B, office 1217, Sindhu Bhavan Marg.,
+                  Sankalp square 3B, office 1217, Sindhu Bhavan Marg.,
                   Ahmedabad, Gujarat 380058
                 </p>
                 <Button variant="outline" size="sm">

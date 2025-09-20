@@ -1,4 +1,3 @@
-"use client"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -17,17 +16,21 @@ import {
   Shield,
   AlertTriangle,
 } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
+
+export const metadata: Metadata = {
+  title: "Our Immigration Services for Humanitarian",
+  description:
+    "Explore our immigration services, including visa applications, green cards, work permits, and citizenship support.",
+  alternates: {
+    canonical: "https://tplglobal.net/services/humanitarian",
+  },
+};
 
 const Humanitarian = () => {
   return (
     <div className="min-h-screen px-4 bg-white">
-      <NextSeo
-        title="Our Immigration Services for Humanitarian"
-        description="Explore our immigration services, including visa applications, green cards, work permits, and citizenship support."
-        canonical="https://tplglobal.net/services/humanitarian"
-      />
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"

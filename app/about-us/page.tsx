@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone } from "lucide-react";
@@ -9,8 +8,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { NextSeo } from "next-seo";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys.",
+  alternates: {
+    canonical: "https://tplglobal.net/about-us",
+  },
+};
 
 const teamMembers = [
   {
@@ -49,11 +57,6 @@ const teamMembers = [
 const About = () => {
   return (
     <main className="pt-20 ">
-      <NextSeo
-        title="About Us"
-        description="Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys."
-        canonical="https://tplglobal.net/about-us"
-      />
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"

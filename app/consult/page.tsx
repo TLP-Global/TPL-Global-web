@@ -1,9 +1,7 @@
 "use client";
-
 import { useEffect } from "react";
-import { NextSeo } from "next-seo";
 
-const ContactForm = () => {
+const Consult = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -13,11 +11,6 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-screen bg-white py-44 px-4">
-      <NextSeo
-        title="Book a Consultation"
-        description="Schedule a consultation with TPL Global immigration lawyers to discuss your case and options."
-        canonical="https://tplglobal.net/consult"
-      />
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"
@@ -87,4 +80,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Consult;
