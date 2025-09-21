@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/accordion";
 import { Users, Heart, Shield, BookOpen, MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const FeaturedServices = () => {
   const services = [
@@ -139,13 +140,15 @@ const FeaturedServices = () => {
                       <BookOpen className="mr-1 h-4 w-4" />
                       Full Guide
                     </Button>
-                    <Button
-                      size="sm"
-                      className="bg-gradient-to-r from-blue-950 to-blue-800 flex-1"
-                    >
-                      <MessageCircle className="mr-1 h-4 w-4" />
-                      Talk to Us
-                    </Button>
+                    <Link href={"/consult"}>
+                      <Button
+                        size="sm"
+                        className="bg-gradient-to-r from-blue-950 to-blue-800 flex-1"
+                      >
+                        <MessageCircle className="mr-1 h-4 w-4" />
+                        Talk to Us
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

@@ -15,6 +15,7 @@ import {
   ExternalLink,
   BookOpen,
 } from "lucide-react";
+import Link from "next/link";
 
 const BlogAndResources = () => {
   const blogPosts = [
@@ -66,7 +67,6 @@ const BlogAndResources = () => {
     <section className="mx-auto max-w-7xl bg-gradient-subtle px-4 py-20">
       <div className="section-container">
         <div className="flex flex-col gap-24">
-
           {/* Resources Section */}
           <div>
             <div className="mb-8">
@@ -156,14 +156,16 @@ const BlogAndResources = () => {
                       <CardDescription>{post.excerpt}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="group-hover:bg-gradient-to-r from-blue-900 to-blue-700 hover:text-white group-hover:text-white p-0"
-                      >
-                        Read more
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                      <Link href={"/blog"}>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="group-hover:bg-gradient-to-r from-blue-900 to-blue-700 hover:text-white group-hover:text-white p-0"
+                        >
+                          Read more
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </Link>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -171,10 +173,12 @@ const BlogAndResources = () => {
             </div>
 
             <div className="mt-8">
-              <Button variant="outline" className="w-full">
-                <BookOpen className="mr-2 h-4 w-4" />
-                View All Blog Posts
-              </Button>
+              <Link href={"/blog"}>
+                <Button variant="outline" className="w-full">
+                  <BookOpen className="mr-2 h-4 w-4" />
+                  View All Blog Posts
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
