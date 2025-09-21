@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@lottiefiles/dotlottie-react": "^0.17.1",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-label": "^2.1.7",

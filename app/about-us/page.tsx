@@ -56,7 +56,7 @@ const teamMembers = [
 ];
 const About = () => {
   return (
-    <main className="pt-20 ">
+    <main className="pt-20 px-4">
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"

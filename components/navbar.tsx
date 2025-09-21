@@ -199,7 +199,7 @@ const Navbar = () => {
                   href="/about-us"
                   className="hover:text-primary transition-colors px-4 py-2"
                 >
-                 About 
+                  About
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
@@ -208,7 +208,7 @@ const Navbar = () => {
                   href="/contact"
                   className="hover:text-primary transition-colors px-4 py-2"
                 >
-                 Contact us
+                  Contact us
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -226,111 +226,47 @@ const Navbar = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col p-4 space-y-4">
+              <nav className="flex flex-col p-4 space-y-4 py-16">
                 <a
                   href="/"
                   className="text-lg font-medium hover:text-primary transition-colors"
                 >
                   Home
                 </a>
-
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium">Services</h3>
                   <div className="pl-4 space-y-4">
                     <div>
                       <h4 className="font-medium text-sm text-muted-foreground mb-2">
-                        INDIVIDUALS
+                        <a
+                          href="/services/individuals"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          INDIVIDUALS
+                        </a>
                       </h4>
-                      <div className="space-y-2 pl-2">
-                        <a
-                          href="/services/individuals"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Visitor Visas (B-1/B-2)
-                        </a>
-                        <a
-                          href="/services/individuals"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Green Cards (Overview)
-                        </a>
-                        <a
-                          href="/services/individuals"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          U.S. Citizenship & Naturalization
-                        </a>
-                      </div>
                     </div>
 
                     <div>
                       <h4 className="font-medium text-sm text-muted-foreground mb-2">
-                        FAMILIES
+                        <a
+                          href="/services/families"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          FAMILIES
+                        </a>
                       </h4>
-                      <div className="space-y-2 pl-2">
-                        <a
-                          href="/services/families"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Family-Based Immigration
-                        </a>
-                        <a
-                          href="/services/families"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Spouse & Fiancé(e)
-                        </a>
-                        <a
-                          href="/services/families"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Parents, Children & Siblings
-                        </a>
-                        <a
-                          href="/services/families"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Remove Conditions (I-751)
-                        </a>
-                      </div>
                     </div>
 
                     <div>
                       <h4 className="font-medium text-sm text-muted-foreground mb-2">
-                        HUMANITARIAN
+                        <a
+                          href="/services/humanitarian"
+                          className="block text-sm hover:text-primary transition-colors"
+                        >
+                          HUMANITARIAN
+                        </a>
                       </h4>
-                      <div className="space-y-2 pl-2">
-                        <a
-                          href="/services/humanitarian"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          Asylum
-                        </a>
-                        <a
-                          href="/services/humanitarian"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          U Visa (Victims of Crime)
-                        </a>
-                        <a
-                          href="/services/humanitarian"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          T Visa (Trafficking)
-                        </a>
-                        <a
-                          href="/services/humanitarian"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          VAWA (Self-Petition)
-                        </a>
-                        <a
-                          href="/services/humanitarian"
-                          className="block text-sm hover:text-primary transition-colors"
-                        >
-                          SIJ
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -339,34 +275,16 @@ const Navbar = () => {
                   <h3 className="text-lg font-medium">Resources</h3>
                   <div className="pl-4 space-y-2">
                     <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Your U.S. Immigration Options
-                    </a>
-                    <a
                       href="/faqs"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       FAQs
                     </a>
                     <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Step-by-Step Guides
-                    </a>
-                    <a
                       href="/processing-times"
                       className="block text-sm hover:text-primary transition-colors"
                     >
                       Processing Times
-                    </a>
-                    <a
-                      href="#"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      Forms & Templates
                     </a>
                     <a
                       href="/blog"
@@ -401,7 +319,7 @@ const Navbar = () => {
               size="lg"
               className="bg-gradient-to-r from-blue-950 to-blue-800  group-hover:shadow-lg transition-all"
             >
-              <Phone className="mr-2 h-5 w-5" />
+              <Phone className="mr-2 h-5 w-5 hidden md:inline" />
               Book a Consultation
             </Button>
           </Link>

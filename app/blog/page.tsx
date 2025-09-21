@@ -24,11 +24,11 @@ import Link from "next/link";
 const blogPosts = [
   {
     id: 1,
-    title:
-      "Complete Guide to B-1/B-2 Visitor Visas: Everything You Need to Know",
+    title: "Step by Step Guide to Applying for a U.S. Visitor Visa B1/B2",
     excerpt:
-      "Learn about eligibility requirements, application process, and what you can and cannot do on a B-1/B-2 visitor visa to the United States.",
+      "A comprehensive guide to applying for U.S. visitor visas for business and tourism purposes.",
     category: "Visitor Visas",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     author: "Sarah Martinez, Esq.",
     date: "December 15, 2024",
     readTime: "8 min read",
@@ -44,6 +44,7 @@ const blogPosts = [
     author: "Michael Chen, Esq.",
     date: "December 12, 2024",
     readTime: "6 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/business-meeting-handshake-professional.jpg",
     tags: ["B-1", "Business", "Requirements"],
   },
@@ -56,6 +57,7 @@ const blogPosts = [
     author: "Lisa Rodriguez, Esq.",
     date: "December 10, 2024",
     readTime: "7 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/tourist-family-visiting-us-landmarks.jpg",
     tags: ["B-2", "Tourism", "Travel"],
   },
@@ -67,6 +69,7 @@ const blogPosts = [
     category: "Family Immigration",
     author: "David Kim, Esq.",
     date: "December 8, 2024",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     readTime: "10 min read",
     image: "/family-reunion-immigration-documents.jpg",
     tags: ["I-130", "Family", "Petition"],
@@ -81,6 +84,7 @@ const blogPosts = [
     author: "Jennifer Park, Esq.",
     date: "December 5, 2024",
     readTime: "9 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/us-consulate-building-and-green-card.jpg",
     tags: ["Consular Processing", "Adjustment of Status", "Green Card"],
   },
@@ -93,6 +97,7 @@ const blogPosts = [
     author: "Robert Thompson, Esq.",
     date: "December 3, 2024",
     readTime: "5 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/calendar-timeline-immigration-process.jpg",
     tags: ["Timeline", "Processing Times", "Family"],
   },
@@ -105,6 +110,7 @@ const blogPosts = [
     author: "Maria Gonzalez, Esq.",
     date: "November 30, 2024",
     readTime: "12 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/diverse-people-seeking-protection-and-safety.jpg",
     tags: ["Asylum", "Protection", "Rights"],
   },
@@ -118,6 +124,7 @@ const blogPosts = [
     author: "Ahmed Hassan, Esq.",
     date: "November 28, 2024",
     readTime: "8 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/world-map-showing-countries-with-humanitarian-cris.jpg",
     tags: ["TPS", "Temporary Protection", "Humanitarian"],
   },
@@ -131,6 +138,7 @@ const blogPosts = [
     author: "Catherine Williams, Esq.",
     date: "November 25, 2024",
     readTime: "11 min read",
+    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     image: "/supportive-hands-offering-help-and-protection.jpg",
     tags: ["VAWA", "U-Visa", "Victim Protection"],
   },
@@ -190,7 +198,7 @@ export default function BlogSection() {
                     <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-
+                    {/*
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
                       <User className="h-3 w-3" />
                       <span>{post.author}</span>
@@ -198,6 +206,7 @@ export default function BlogSection() {
                       <Calendar className="h-3 w-3" />
                       <span>{post.date}</span>
                     </div>
+                    */}
 
                     <div className="flex flex-wrap gap-1 mb-4">
                       {post.tags.slice(0, 3).map((tag) => (
@@ -206,15 +215,16 @@ export default function BlogSection() {
                         </Badge>
                       ))}
                     </div>
-
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full group-hover:bg-blue-950 group-hover:text-primary-foreground transition-colors bg-transparent"
-                    >
-                      Read Article
-                      <ArrowRight className="h-4 w-4 ml-1" />
-                    </Button>
+                    <Link href={`/blog/${post.slug}`}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full group-hover:bg-blue-950 hover:bg-blue-950 hover:text-white group-hover:text-primary-foreground transition-colors bg-transparent"
+                      >
+                        Read Article
+                        <ArrowRight className="h-4 w-4 ml-1" />
+                      </Button>
+                    </Link>
                   </CardContent>
                 </Card>
               ))}

@@ -69,7 +69,7 @@ const Consult = () => {
             dangerouslySetInnerHTML={{
               __html: `<div
           class="calendly-inline-widget"
-          data-url="https://calendly.com/bakingai-agency/tpl-global-call"
+          data-url="https://calendly.com/tplglobal-marketing/new-meeting"
           style="min-width:320px;height:700px;"
         ></div>`,
             }}

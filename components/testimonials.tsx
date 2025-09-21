@@ -45,7 +45,7 @@ const TestimonialsAndTrust = () => {
   ];
 
   return (
-    <section className="mx-auto py-20 max-w-7xl ">
+    <section className="mx-auto py-20 max-w-7xl px-4">
       <div className="section-container ">
         {/* Client Testimonials */}
         <div className="text-center mb-16">
@@ -58,7 +58,7 @@ const TestimonialsAndTrust = () => {
         </div>
 
         <div className="mb-16">
-          <Carousel className="w-full max-w-4xl mx-auto">
+          <Carousel className="w-full max-w-4xl mx-auto ">
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 h-72 ">

@@ -1,37 +1,17 @@
 "use client";
 import type React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { MapPin, Phone, Mail, Clock, BookOpen } from "lucide-react";
+import { Card, CardContent} from "@/components/ui/card";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { MapPin, Phone,  Clock, BookOpen } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import { useForm} from "@formspree/react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  const [state, handleSubmit] = useForm("xqayzavb");
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div className="min-h-screen bg-background py-32">
@@ -42,7 +22,7 @@ export default function ContactPage() {
       />
 
       {/* Hero Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-44 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-blue-950 mb-6 text-balance">
             Contact T.P.L. Global
@@ -131,87 +111,149 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl text-blue-950">
-                  Send Us a Message
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="firstName">First Name</Label>
-                      <Input
-                        id="firstName"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required
-                        className="mt-1"
-                      />
+            {state.succeeded ? (
+              <Card className="max-w-4xl w-full border-0 shadow-2xl animate-in fade-in-50 slide-in-from-bottom-4 duration-700">
+                <CardContent className="p-8 md:p-12 text-center">
+                  <div className="mb-8">
+                    <div className="flex justify-center">
+                      <div className="w-28 h-28">
+                        <DotLottieReact
+                          src="https://lottie.host/9bbe60e0-0f33-4aaf-9cd9-47f23cb87e1c/CAJvHClp2v.lottie"
+                          loop
+                          autoplay
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </div>
                     </div>
-                    <div>
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                        className="mt-1"
-                      />
-                    </div>
+
+                    <h3 className="text-3xl font-bold text-gray-400  mb-3">
+                      Thank You!
+                    </h3>
+                    <p className="text-lg text-[var(--color-gray)] mb-2">
+                      We&apos;ve received your request successfully
+                    </p>
+                    <p className="text-[var(--color-gray)] text-sm">
+                      Our team will review your preferences and get back to you
+                    </p>
                   </div>
 
-                  <div>
-                    <Label htmlFor="email">Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
+                  <div className="pt-6 border-t ">
+                    <p className="text-sm text-[var(--color-gray)] mb-4">
+                      While you wait, feel free to explore our other services
+                    </p>
+                    <Button
+                      variant="outline"
+                      className=" bg-blue-400 text-white hover:text-white  hover:bg-[var(--color-primary)]/80 "
+                      onClick={() => window.location.reload()}
+                    >
+                      Submit Another Request
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ) : (
+              <form onSubmit={handleSubmit} className="rounded-md shadow-md bg-secondary p-8 space-y-6">
+                {/* Name Fields */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="firstName" className="text-sm font-medium ">
+                      First name <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="firstName"
+                      type="text"
+                      name="First name"
+                      className=" h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="lastName" className="text-sm font-medium">
+                      Last name <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="lastName"
+                      type="text"
+                      name="Last name"
+                      className=" h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Email and Phone */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="workEmail" className="text-sm font-medium ">
+                      Work email <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="workEmail"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
+                      name="Email"
+                      className=" h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
                       required
-                      className="mt-1"
                     />
                   </div>
-
-                  <div>
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="phoneNumber"
+                      className="text-sm font-medium "
+                    >
+                      Phone number <span className="text-destructive">*</span>
+                    </label>
+                    <input
+                      id="phoneNumber"
                       type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="mt-1"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
+                      name="phone number"
                       required
-                      rows={5}
-                      className="mt-1"
-                      placeholder="Tell us about your legal needs..."
+                      className=" h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
                     />
                   </div>
+                </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full bg-blue-950 hover:bg-blue-950/90 text-white text-lg py-3 font-medium"
+                {/* Company */}
+                <div className="space-y-2">
+                  <label htmlFor="companyName" className="text-sm font-medium ">
+                    Company name <span className="text-destructive">*</span>
+                  </label>
+                  <input
+                    id="companyName"
+                    type="text"
+                    name="company name"
+                    className=" h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
+                    required
+                  />
+                </div>
+                {/* Additional Info */}
+                <div className="space-y-2">
+                  <label
+                    htmlFor="additionalInfo"
+                    className="text-sm font-medium text-form-label"
                   >
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    What else would you like to discuss?{" "}
+                    <span className="text-destructive">*</span>
+                  </label>
+                  <textarea
+                    id="additionalInfo"
+                    name="Additional Info"
+                    className="min-h-10 w-full rounded text-black focus:outline-zapier-blue p-4 border outline-none  bg-white"
+                    placeholder="Please provide any other details here."
+                    required
+                  />
+                </div>
+
+
+                {/* Submit Button */}
+                <Button
+                  type="submit"
+                  className="w-full bg-blue-950 hover:bg-blue-950/90 hover:cursor-pointer text-primary-foreground py-3 font-medium"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Submitting..." : "Submit"}
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </section>

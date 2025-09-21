@@ -162,7 +162,7 @@ const QuickPathTiles = () => {
                         <Link href={item.link} className="flex gap-2">
 
                         <div className="w-4 h-4 bg-primary rounded-full border-2 border-background shadow-lg cursor-pointer transition-all duration-300 hover:scale-125 hover:shadow-xl" />
-                        <span className="text-xs text-muted-foreground max-w-28">
+                        <span className="text-xs text-left text-muted-foreground max-w-28">
                           {item.title}
                         </span>
                         </Link>

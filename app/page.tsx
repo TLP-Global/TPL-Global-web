@@ -64,7 +64,7 @@ export default function Home() {
   ];
 
   return (
-    <div className=" mx-auto w-screen">
+    <div className="overflow-clip mx-auto w-screen">
       <img
         src="/hero.jpg"
         alt="Notary seal stamping official legal documents"
@@ -75,8 +75,11 @@ export default function Home() {
         <div className="relative min-h-screen flex items-center">
           <video
             autoPlay
+            playsInline
             loop
-            className="absolute inset-0 w-full h-full object-cover"
+            muted
+            controls={false}
+            className="absolute pointer-events-none inset-0 w-full h-full object-cover"
           >
             <source src="/hero.mp4" type="video/mp4" />
           </video>

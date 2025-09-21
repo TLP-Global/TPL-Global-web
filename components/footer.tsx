@@ -4,9 +4,9 @@ const Footer = () => {
   const navigation = [
     { name: 'Services', href: '#services' },
     { name: 'About', href: '/about-us' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Resources', href: '#resources' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -65,7 +65,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-background/60 text-sm">
-              © 2024 TPL Global Immigration Law. All rights reserved.
+              © 2025 TPL Global Immigration Law. All rights reserved.
             </div>
             <div className="flex items-center gap-4 text-background/60 text-sm">
               <a href="/faqs" className="hover:text-accent transition-colors">
