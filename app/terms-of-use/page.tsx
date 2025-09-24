@@ -11,7 +11,12 @@ export const metadata: Metadata = {
 const TermsOfUse = () => {
   return (
     <div>
-      <main className="section-container max-w-7xl mx-auto py-20">
+      <main className="min-h-screen px-4 py-40 bg-white">
+        <img
+          src="/hero.jpg"
+          alt="Notary seal stamping official legal documents"
+          className="hidden md:block  fixed bottom-0 -z-10  w-screen left-0"
+        />
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">Terms of Use</h1>
           <p className="text-blue-950/60 mb-8">Last updated: 10.09.2025</p>

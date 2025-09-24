@@ -30,21 +30,21 @@ const blogPosts = [
     category: "Visitor Visas",
     slug: "step-by-step-guide-us-visitor-visa-b1-b2",
     author: "Sarah Martinez, Esq.",
-    date: "December 15, 2024",
+    date: "September 22, 2025",
     readTime: "8 min read",
     image: "/us-visa-application-documents-on-desk.jpg",
     tags: ["B-1", "B-2", "Tourism", "Business"],
   },
   {
     id: 2,
-    title: "Understanding B-1 Business Visa Requirements and Restrictions",
+    title: "Green Card 101: Types, Timelines, and What to Expect",
     excerpt:
-      "Detailed breakdown of B-1 business visa eligibility, permitted activities, and common reasons for denial.",
-    category: "Visitor Visas",
+      "A comprehensive guide to U.S. green cards including types, application process, timelines, and what to expect.",
+    category: "Green Cards",
     author: "Michael Chen, Esq.",
-    date: "December 12, 2024",
+    date: "September 24, 2025",
     readTime: "6 min read",
-    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
+    slug: "green-card-101-types-timelines-what-to-expect",
     image: "/business-meeting-handshake-professional.jpg",
     tags: ["B-1", "Business", "Requirements"],
   },
@@ -198,15 +198,10 @@ export default function BlogSection() {
                     <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
-                    {/*
                     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
-                      <User className="h-3 w-3" />
-                      <span>{post.author}</span>
-                      <span>•</span>
                       <Calendar className="h-3 w-3" />
                       <span>{post.date}</span>
                     </div>
-                    */}
 
                     <div className="flex flex-wrap gap-1 mb-4">
                       {post.tags.slice(0, 3).map((tag) => (
