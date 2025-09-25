@@ -176,7 +176,7 @@ export default function Home() {
       <section className="md:mt-52 mt-28 bg-background">
         <BlogAndResources />
       </section>
-      <section className="md:mt-52 mt-28 bg-background">
+      <section className=" bg-background">
         <FinalCTA />
       </section>
     </div>
