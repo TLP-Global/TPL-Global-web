@@ -50,16 +50,16 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "B-2 Tourist Visa: Planning Your Visit to the United States",
+    title: "Top 7 Mistakes That Can Derail Your U.S. Citizenship Application",
     excerpt:
-      "Essential information for tourists applying for B-2 visas, including documentation, interview tips, and duration of stay.",
-    category: "Visitor Visas",
+      "Learn about the most common errors applicants make when applying for U.S. citizenship and how to avoid them.",
+    category: "Family Immigration",
     author: "Lisa Rodriguez, Esq.",
-    date: "December 10, 2024",
+    date: "September 26, 2025",
     readTime: "7 min read",
-    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
+    slug: "top-7-mistakes-us-citizenship-application",
     image: "/tourist-family-visiting-us-landmarks.jpg",
-    tags: ["B-2", "Tourism", "Travel"],
+    tags: ["B-2", "Citizenship", "Travel"],
   },
   {
     id: 4,
