@@ -35,7 +35,7 @@ const QuickPathTiles = () => {
           photo: "/individuals/visitor-visa.png",
         },
         {
-          title: "Permanent Residence",
+          title: "Green Card (PR)",
           description: "Step-by-step pathways to permanent residence.",
           icon: CreditCard,
           link: "/services/individuals",

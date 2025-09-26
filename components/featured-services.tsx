@@ -23,6 +23,7 @@ const FeaturedServices = () => {
       title: "Visitor Visa (B-1/B-2)",
       icon: Users,
       description: "Business and tourism visas for temporary stays",
+      link: "/services/individuals",
       faqs: [
         {
           question: "Who is eligible?",
@@ -45,6 +46,7 @@ const FeaturedServices = () => {
       title: "Family Immigration",
       icon: Heart,
       description: "Reunite with loved ones through family-based petitions",
+      link: "/services/families",
       faqs: [
         {
           question: "How the I-130 petition works",
@@ -67,6 +69,7 @@ const FeaturedServices = () => {
       title: "Humanitarian Options",
       icon: Shield,
       description: "Protection for those facing persecution or harm",
+      link: "/services/humanitarian",
       faqs: [
         {
           question: "Who qualifies",
@@ -136,10 +139,12 @@ const FeaturedServices = () => {
                   </Accordion>
 
                   <div className="flex gap-2">
+                    <Link href={service.link}>
                     <Button variant="outline" size="sm" className="flex-1">
                       <BookOpen className="mr-1 h-4 w-4" />
                       Full Guide
                     </Button>
+                    </Link>
                     <Link href={"/consult"}>
                       <Button
                         size="sm"
