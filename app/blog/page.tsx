@@ -63,15 +63,15 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "I-130 Family Petition Process: Step-by-Step Guide",
+    title: "Family Immigration: Immediate Relatives vs Preference Categories Explained",
     excerpt:
       "Complete walkthrough of filing Form I-130 to petition for family members, including required documents and processing times.",
     category: "Family Immigration",
     author: "David Kim, Esq.",
-    date: "December 8, 2024",
-    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
+    date: "September 29, 2025",
+    slug: "family-immigration-immediate-relatives-vs-preference-categories",
     readTime: "10 min read",
-    image: "/family-reunion-immigration-documents.jpg",
+    image: "/blog4.jpeg",
     tags: ["I-130", "Family", "Petition"],
   },
   {
