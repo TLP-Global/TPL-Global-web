@@ -11,7 +11,7 @@ const blogContent = {
     title: "Top 7 Mistakes That Can Derail Your U.S. Citizenship Application",
     description:
       "Learn about the most common errors applicants make when applying for U.S. citizenship and how to avoid them.",
-    date: "March 25, 2024",
+    date: "September 26, 2025",
     readTime: "7 min read",
     category: "Citizenship",
     content: {
@@ -151,7 +151,6 @@ export default function Blog() {
               {post.content.intro}
             </p>
           </section>
-
 
           <section className="mb-12">
             <h2 className="text-3xl font-semibold text-blue-950 mb-8">
