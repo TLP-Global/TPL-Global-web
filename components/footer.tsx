@@ -1,4 +1,4 @@
-import { FaInstagram, FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaMedium, FaReddit, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   const navigation = [
@@ -54,9 +54,23 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com/@tejaspatel-tplglobal"
                 className=" hover:text-zapier-blue"
-                aria-label="Instagram"
+                aria-label="Youtube"
               >
                 <FaYoutube size={20} />
+              </a>
+              <a
+                href="https://medium.com/@tplglobal_usimmigration"
+                className=" hover:text-zapier-blue"
+                aria-label="Medium"
+              >
+                <FaMedium size={20} />
+              </a>
+              <a
+                href="https://www.reddit.com/r/USimmigrationindia/"
+                className=" hover:text-zapier-blue"
+                aria-label="Reddit"
+              >
+                <FaReddit size={20} />
               </a>
             </div>
           </div>
