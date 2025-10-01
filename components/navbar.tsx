@@ -161,25 +161,13 @@ const Navbar = () => {
                       Start Here: Your U.S. Immigration Options
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      href="/faqs"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      FAQs
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
-                      href="#"
-                      className="block py-2 hover:text-primary transition-colors"
-                    >
-                      Step-by-Step Guides & Checklists
-                    </NavigationMenuLink>
-                    <NavigationMenuLink
                       href="/processing-times"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Processing Times & Priority Dates
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      href="#"
+                      href="/forms"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Forms & Document Templates
@@ -273,22 +261,22 @@ const Navbar = () => {
 
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium">Resources</h3>
-                  <div className="pl-4 space-y-2">
-                    <a
-                      href="/faqs"
-                      className="block text-sm hover:text-primary transition-colors"
-                    >
-                      FAQs
-                    </a>
+                  <div className="pl-4 space-y-4">
                     <a
                       href="/processing-times"
-                      className="block text-sm hover:text-primary transition-colors"
+                      className="font-medium block text-lg text-muted-foreground mb-2"
                     >
                       Processing Times
                     </a>
                     <a
+                      href="/forms"
+                      className="font-medium block text-lg text-muted-foreground mb-2"
+                    >
+                      Forms & Document Templates
+                    </a>
+                    <a
                       href="/blog"
-                      className="block text-sm hover:text-primary transition-colors"
+                      className="font-medium block text-lg text-muted-foreground mb-2"
                     >
                       Blog / Insights
                     </a>

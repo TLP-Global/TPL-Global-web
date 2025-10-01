@@ -124,7 +124,7 @@ const blogContent = {
         title: 'Conclusion',
         content: 'Navigating family-based immigration can be complex, but understanding the distinction between Immediate Relatives and Preference Categories is essential. Immediate Relatives receive the fastest processing times and are not subject to numerical limits, while Preference Categories face longer wait times due to annual caps and priority dates.',
         advice: 'If you are considering sponsoring a family member or applying for a family-based green card, consulting with an immigration attorney or expert can help clarify your specific situation and ensure the smooth processing of your application.',
-        futureUpdates: 'For more insights on family immigration and how AI is transforming the immigration process, stay tuned for future updates!'
+        futureUpdates: 'For more insights on family immigration stay tuned for future updates!'
       },
       expertHelp: {
         title: 'Need Expert Help',
