@@ -65,7 +65,7 @@ const blogPosts = [
     id: 4,
     title: "Family Immigration: Immediate Relatives vs Preference Categories Explained",
     excerpt:
-      "Complete walkthrough of filing Form I-130 to petition for family members, including required documents and processing times.",
+      "Understanding the difference between Immediate Relatives and Preference Categories can be a crucial factor in determining your immigration pathway.",
     category: "Family Immigration",
     author: "David Kim, Esq.",
     date: "September 29, 2025",
@@ -77,15 +77,15 @@ const blogPosts = [
   {
     id: 5,
     title:
-      "Consular Processing vs. Adjustment of Status: Which Path is Right for You?",
+      "K-1 Fiancé Visa vs Spouse Visa: Which One Is Right for You?",
     excerpt:
-      "Compare the two main pathways for obtaining permanent residence and learn which option best fits your situation.",
+      "Understanding the differences between the K-1 Fiancé Visa and the Spouse Visa to make an informed decision for your situation.",
     category: "Family Immigration",
     author: "Jennifer Park, Esq.",
-    date: "December 5, 2024",
+    date: "October 3, 2025",
     readTime: "9 min read",
-    slug: "step-by-step-guide-us-visitor-visa-b1-b2",
-    image: "/us-consulate-building-and-green-card.jpg",
+    slug: "k1-fiance-visa-vs-spouse-visa",
+    image: "/blog5.jpeg",
     tags: ["Consular Processing", "Adjustment of Status", "Green Card"],
   },
   {
@@ -210,11 +210,11 @@ export default function BlogSection() {
                         </Badge>
                       ))}
                     </div>
-                    <Link href={`/blog/${post.slug}`}>
+                    <Link href={`/blog/${post.slug}`} >
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full group-hover:bg-blue-950 hover:bg-blue-950 hover:text-white group-hover:text-primary-foreground transition-colors bg-transparent"
+                        className="w-full cursor-pointer group-hover:bg-blue-950 hover:bg-blue-950 hover:text-white group-hover:text-primary-foreground transition-colors bg-transparent"
                       >
                         Read Article
                         <ArrowRight className="h-4 w-4 ml-1" />
