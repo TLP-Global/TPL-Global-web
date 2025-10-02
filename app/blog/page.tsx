@@ -32,7 +32,7 @@ const blogPosts = [
     author: "Sarah Martinez, Esq.",
     date: "September 22, 2025",
     readTime: "8 min read",
-    image: "/us-visa-application-documents-on-desk.jpg",
+    image: "/blog1.jpeg",
     tags: ["B-1", "B-2", "Tourism", "Business"],
   },
   {
@@ -45,7 +45,7 @@ const blogPosts = [
     date: "September 24, 2025",
     readTime: "6 min read",
     slug: "green-card-101-types-timelines-what-to-expect",
-    image: "/business-meeting-handshake-professional.jpg",
+    image: "/blog2.jpeg",
     tags: ["B-1", "Business", "Requirements"],
   },
   {
@@ -58,7 +58,7 @@ const blogPosts = [
     date: "September 26, 2025",
     readTime: "7 min read",
     slug: "top-7-mistakes-us-citizenship-application",
-    image: "/tourist-family-visiting-us-landmarks.jpg",
+    image: "/blog3.jpeg",
     tags: ["B-2", "Citizenship", "Travel"],
   },
   {
@@ -82,7 +82,7 @@ const blogPosts = [
       "Understanding the differences between the K-1 Fiancé Visa and the Spouse Visa to make an informed decision for your situation.",
     category: "Family Immigration",
     author: "Jennifer Park, Esq.",
-    date: "October 3, 2025",
+    date: "October 2, 2025",
     readTime: "9 min read",
     slug: "k1-fiance-visa-vs-spouse-visa",
     image: "/blog5.jpeg",

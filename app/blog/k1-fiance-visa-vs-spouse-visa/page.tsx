@@ -11,7 +11,7 @@ const blogContent = {
     title: "K-1 Fiancé Visa vs Spouse Visa: Which One Is Right for You?",
     description:
       "Understanding the differences between the K-1 Fiancé Visa and the Spouse Visa to make an informed decision for your situation.",
-    date: "October 3, 2025",
+    date: "October 2, 2025",
     readTime: "9 min read",
     category: "Family Immigration",
     content: {
