@@ -98,7 +98,7 @@ const blogPosts = [
     date: "October 4, 2025",
     readTime: "5 min read",
     slug: "remove-conditions-marriage-based-green-card-i751",
-    image: "/calendar-timeline-immigration-process.jpg",
+    image: "/blog6.jpeg",
     tags: ["Timeline", "Processing Times", "Family"],
   },
   {
