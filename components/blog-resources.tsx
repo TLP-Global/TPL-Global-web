@@ -156,7 +156,7 @@ const BlogAndResources = () => {
                       <CardDescription>{post.excerpt}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <Link href={"/blog"}>
+                      <Link href={"https://blog.tplglobal.net/"}>
                         <Button
                           variant="outline"
                           size="sm"
@@ -173,7 +173,7 @@ const BlogAndResources = () => {
             </div>
 
             <div className="mt-8">
-              <Link href={"/blog"}>
+              <Link href={"https://blog.tplglobal.net/"}>
                 <Button variant="outline" className="w-full">
                   <BookOpen className="mr-2 h-4 w-4" />
                   View All Blog Posts

@@ -173,7 +173,7 @@ const Navbar = () => {
                       Forms & Document Templates
                     </NavigationMenuLink>
                     <NavigationMenuLink
-                      href="/blog"
+                      href="https://blog.tplglobal.net/"
                       className="block py-2 hover:text-primary transition-colors"
                     >
                       Blog / Insights
@@ -275,7 +275,7 @@ const Navbar = () => {
                       Forms & Document Templates
                     </a>
                     <a
-                      href="/blog"
+                      href="https://blog.tplglobal.net/"
                       className="font-medium block text-lg text-muted-foreground mb-2"
                     >
                       Blog / Insights
