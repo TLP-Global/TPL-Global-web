@@ -14,7 +14,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys.",
+    "Boston Top Immigration Lawyer. Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys.",
   alternates: {
     canonical: "https://tplglobal.net/about-us",
   },
@@ -106,7 +106,7 @@ const About = () => {
               <div className="w-80 h-96 border border-black bg-secondary/20 rounded-lg flex items-center justify-center">
                 <img
                   src="/tejas-patel.jpg"
-                  alt="Tejas Patel Profile Image"
+                  alt="Boston Top Immigration Lawyer Tejas Patel Profile Image"
                   className="bg-muted-foreground h-full"
                 />
               </div>
