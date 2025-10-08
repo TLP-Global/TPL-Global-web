@@ -4,6 +4,15 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Script from "next/script";
+import { IoMailOutline } from "react-icons/io5";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaMedium,
+  FaReddit,
+  FaYoutube,
+} from "react-icons/fa6";
+import { Phone } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +51,7 @@ export const metadata: Metadata = {
     "citizenship N-400",
     "Tejas G. Pate, Esq.l",
     "TPL Global",
-    "Boston Top Immigration Lawyer"
+    "Boston Top Immigration Lawyer",
   ],
   openGraph: {
     type: "website",
@@ -116,6 +125,64 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <Navbar />
+        <div className=" flex-col fixed w-10 h-fit border border-black rounded-tl-lg rounded-bl-lg right-0 top-[60vh] lg:top-52 color-black text-center z-50 bg-white flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/company/t-p-l-global-llc/"
+            target="_blank"
+            aria-label="LinkedIn"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <FaLinkedin className="m-2 w-6 h-6 lg:w-4 lg:h-4 " />
+          </a>
+          <a
+            href="https://www.instagram.com/tpl_global/"
+            target="_blank"
+            aria-label="Instagram"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <FaInstagram className="m-2 w-6 h-6 lg:w-4 lg:h-4 " />
+          </a>
+          <a
+            href="https://www.youtube.com/@tejaspatel-tplglobal"
+            target="_blank"
+            aria-label="Youtube"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <FaYoutube className="m-2 w-6 h-6 lg:w-4 lg:h-4 " />
+          </a>
+          <a
+            href="https://medium.com/@tplglobal_usimmigration"
+            target="_blank"
+            aria-label="Medium"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <FaMedium className="m-2 w-6 h-6 lg:w-4 lg:h-4 " />
+          </a>
+          <a
+            href="https://www.reddit.com/r/USimmigrationindia/"
+            target="_blank"
+            aria-label="Reddit"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <FaReddit className="m-2 w-6 h-6 lg:w-4 lg:h-4 " />
+          </a>
+          <a
+            href="/consult"
+            target="_blank"
+            aria-label="Book a consultation"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <Phone className="m-2 w-6 h-6 lg:w-4 lg:h-4" />
+          </a>
+          <a
+            href="mailto:Tejas.P@tplglobal.net"
+            target="_blank"
+            aria-label="send mail"
+            className="hover:scale-[1.5] transition-all duration-300"
+          >
+            <IoMailOutline className="m-2 w-6 h-6 lg:w-4 lg:h-4" />
+          </a>
+        </div>
         {children}
         <Footer />
       </body>
