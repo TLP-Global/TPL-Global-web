@@ -29,16 +29,16 @@ const teamMembers = [
     description:
       "Samloth was born in Cambodia. Her family  immigrated to the U.S. when she was just a toddler; fleeing a hostile regime. She grew up in the Northshore and later graduated with a B.A. in Communications from a college in Boston. Her love of history, art and food led her to live and work abroad in Taiwan as well as extensive travels throughout Europe and Asia. Samloth has deep knowledge and years of practical experience in filing various types of immigration matters ranging from U-Visa, Family Petition, SIJ and Asylum cases. As manager, she oversees the Team Leads, implements the Firm's policies and procedures, conducts training and ensures client relations are upheld to meet both the clients' and Firm's standards.",
   },
+  // {
+  //   id: 2,
+  //   name: "Raghav Khandelwal",
+  //   position: "Immigration Attorney, Family Petition, T-Visa, VAWA Team",
+  //   image: "/raghav.png",
+  //   description:
+  //     "Raghav Khandelwal is an immigration attorney dedicated to helping individuals and families through the intricacies of immigration law. With a B.A.LL.B (Business Law Hons.) from ICFAI University Dehradun, Raghav combines his legal knowledge with a deep commitment to his clients' needs. He specializes in assisting with family petitions, consular processing, U.S. Naturalization applications, T-Visas and VAWA cases providing personalized and effective solutions. Raghav's client-centered approach and attention to detail ensure that each case is handled with the utmost care, and as a result, earning clients’ trust to help with complex immigration matters.",
+  // },
   {
     id: 2,
-    name: "Raghav Khandelwal",
-    position: "Immigration Attorney, Family Petition, T-Visa, VAWA Team",
-    image: "/raghav.png",
-    description:
-      "Raghav Khandelwal is an immigration attorney dedicated to helping individuals and families through the intricacies of immigration law. With a B.A.LL.B (Business Law Hons.) from ICFAI University Dehradun, Raghav combines his legal knowledge with a deep commitment to his clients' needs. He specializes in assisting with family petitions, consular processing, U.S. Naturalization applications, T-Visas and VAWA cases providing personalized and effective solutions. Raghav's client-centered approach and attention to detail ensure that each case is handled with the utmost care, and as a result, earning clients’ trust to help with complex immigration matters.",
-  },
-  {
-    id: 3,
     name: "Rahul Dubey",
     position: "Finance Associate",
     image: "/rahul.png",
@@ -46,7 +46,7 @@ const teamMembers = [
       "Rahul Dubey is a Finance Associate at TPL Global LLC with over three years of experience in accounting, inventory management, statutory audits, and ROC compliances. He completed his education at Ranchi University, earning a first-class degree in Accounting and Finance. He is proficient in preparing and analyzing financial statements to ensure accuracy and regulatory compliance, managing tax filings and optimizing tax strategies, conducting internal and external audits to assess financial health and operational efficiency, ensuring adherence to all financial regulations and standards, and offering strategic financial advice to foster business growth and development. His expertise and dedication have made him a key contributor in the finance and compliance sectors.",
   },
   {
-    id: 4,
+    id: 3,
     name: "Diana Garcia",
     position: "Secretary",
     image: "/diana.png",
