@@ -26,7 +26,7 @@ const Consult = () => {
                 CONTACT OUR TEAM
               </p>
               <h1 className="text-5xl font-bold text-foreground leading-tight mb-6">
-                Contact T.P.L. Global
+                Contact TPL Global
               </h1>
               <p className="text-lg text-form-label leading-relaxed mb-12">
                 Ready to discuss your legal needs? Our experienced team is here

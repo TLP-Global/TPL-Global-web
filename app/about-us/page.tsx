@@ -67,7 +67,7 @@ const About = () => {
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
-              The Team Behind T.P.L. Global
+              The Team Behind TPL Global
             </h1>
             <p className="text-base lg:text-white/80 text-blue-950/60">
               Meet the dedicated professionals committed to your immigration
@@ -87,7 +87,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-blue-950/60">
                 <p>
-                  Mr. Tejas G. Patel, Esq. founded T.P.L. Global with a simple
+                  Mr. Tejas G. Patel, Esq. founded TPL Global with a simple
                   belief: immigration clients deserve both sharp legal strategy
                   and genuine care. Known for his tenacity, creative
                   problem-solving, and clear communication, Tejas has helped
@@ -125,7 +125,7 @@ const About = () => {
               </h3>
               <div className="space-y-4 text-blue-950/60">
                 <p>
-                  Before founding T.P.L. Global, Tejas worked as in-house
+                  Before founding TPL Global, Tejas worked as in-house
                   counsel for a nationally recognized bank, sharpening his
                   advocacy skills in high-stakes environments. He earned his
                   Juris Doctor from Suffolk University Law School in 2014, where
@@ -313,11 +313,11 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* Why Clients Choose T.P.L. Global */}
+      {/* Why Clients Choose TPL Global */}
       <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold text-blue-950 mb-8 text-center">
-            Why Clients Choose T.P.L. Global
+            Why Clients Choose TPL Global
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">

@@ -180,7 +180,7 @@ const blogContent = {
         title: "Need Expert Help",
         name: "Tejas G. Patel, Esq.",
         description:
-          "founded T.P.L. Global with a simple belief that immigration clients deserve both sharp legal strategy and genuine care. Known for his tenacity, creative problem-solving, and clear communication, Tejas has helped individuals and families navigate complex immigration challenges with confidence.",
+          "founded TPL Global with a simple belief that immigration clients deserve both sharp legal strategy and genuine care. Known for his tenacity, creative problem-solving, and clear communication, Tejas has helped individuals and families navigate complex immigration challenges with confidence.",
       },
     },
   },
@@ -430,7 +430,7 @@ export default function Blog() {
               Need Expert Help?
             </h2>
             <p className="text-blue-950/60 mb-6 max-w-2xl mx-auto">
-              Tejas G. Patel, Esq. founded T.P.L. Global with a simple belief
+              Tejas G. Patel, Esq. founded TPL Global with a simple belief
               that immigration clients deserve both sharp legal strategy and
               genuine care. Known for his tenacity, creative problem-solving,
               and clear communication, Tejas has helped individuals and families
