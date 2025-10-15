@@ -25,7 +25,7 @@ export default function ContactPage() {
       <section className="py-44 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-blue-950 mb-6 text-balance">
-            Contact TPL Global
+            Contact T.P.L. Global, LLC 
           </h1>
           <p className="text-lg text-blue-950/60 max-w-3xl mx-auto leading-relaxed">
             Ready to discuss your legal needs? Our experienced team is here to
@@ -306,7 +306,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="TPL Global Office Locations"
+              title="T.P.L. Global, LLC Office Locations"
             />
           </div>
         </div>
@@ -319,7 +319,7 @@ export default function ContactPage() {
             Ready to Discuss Your Case?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Don't wait to get the legal help you need. Contact TPL Global
+            Don't wait to get the legal help you need. Contact T.P.L. Global, LLC
             today for expert legal representation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

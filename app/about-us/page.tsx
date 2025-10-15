@@ -14,7 +14,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Boston Top Immigration Lawyer. Learn more about TPL Global Immigration law firm, our mission, and our team of experienced immigration attorneys.",
+    "Boston Top Immigration Lawyer. Learn more about T.P.L. Global, LLC Immigration law firm, our mission, and our team of experienced immigration attorneys.",
   alternates: {
     canonical: "https://tplglobal.net/about-us",
   },
@@ -43,7 +43,7 @@ const teamMembers = [
     position: "Finance Associate",
     image: "/rahul.png",
     description:
-      "Rahul Dubey is a Finance Associate at TPL Global LLC with over three years of experience in accounting, inventory management, statutory audits, and ROC compliances. He completed his education at Ranchi University, earning a first-class degree in Accounting and Finance. He is proficient in preparing and analyzing financial statements to ensure accuracy and regulatory compliance, managing tax filings and optimizing tax strategies, conducting internal and external audits to assess financial health and operational efficiency, ensuring adherence to all financial regulations and standards, and offering strategic financial advice to foster business growth and development. His expertise and dedication have made him a key contributor in the finance and compliance sectors.",
+      "Rahul Dubey is a Finance Associate at T.P.L. Global, LLC with over three years of experience in accounting, inventory management, statutory audits, and ROC compliances. He completed his education at Ranchi University, earning a first-class degree in Accounting and Finance. He is proficient in preparing and analyzing financial statements to ensure accuracy and regulatory compliance, managing tax filings and optimizing tax strategies, conducting internal and external audits to assess financial health and operational efficiency, ensuring adherence to all financial regulations and standards, and offering strategic financial advice to foster business growth and development. His expertise and dedication have made him a key contributor in the finance and compliance sectors.",
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const About = () => {
         <div className="section-container max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-6">
-              The Team Behind TPL Global
+              The Team Behind T.P.L. Global, LLC
             </h1>
             <p className="text-base lg:text-white/80 text-blue-950/60">
               Meet the dedicated professionals committed to your immigration
@@ -87,7 +87,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-blue-950/60">
                 <p>
-                  Mr. Tejas G. Patel, Esq. founded TPL Global with a simple
+                  Mr. Tejas G. Patel, Esq. founded T.P.L. Global, LLC with a simple
                   belief: immigration clients deserve both sharp legal strategy
                   and genuine care. Known for his tenacity, creative
                   problem-solving, and clear communication, Tejas has helped
@@ -125,7 +125,7 @@ const About = () => {
               </h3>
               <div className="space-y-4 text-blue-950/60">
                 <p>
-                  Before founding TPL Global, Tejas worked as in-house
+                  Before founding T.P.L. Global, LLC, Tejas worked as in-house
                   counsel for a nationally recognized bank, sharpening his
                   advocacy skills in high-stakes environments. He earned his
                   Juris Doctor from Suffolk University Law School in 2014, where
@@ -313,11 +313,11 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* Why Clients Choose TPL Global */}
+      {/* Why Clients Choose T.P.L. Global, LLC */}
       <section className="py-16 bg-white">
         <div className="section-container max-w-7xl mx-auto">
           <h3 className="text-lg font-bold text-blue-950 mb-8 text-center">
-            Why Clients Choose TPL Global
+            Why Clients Choose T.P.L. Global, LLC
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">

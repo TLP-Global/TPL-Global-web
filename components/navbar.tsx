@@ -31,7 +31,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <a href="/" className="text-xl font-bold">
-              <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
+              <img src="/logo.png" alt="T.P.L. Global, LLC Logo" className="w-40" />
             </a>
           </div>
 

@@ -5,7 +5,7 @@ import { Quote, Clock, MessageSquare, CheckCircle } from 'lucide-react';
 const TestimonialsAndTrust = () => {
   const testimonials = [
     {
-      quote: "TPL Global made the K-1 process clear and manageable. Their guidance was invaluable throughout our journey.",
+      quote: "T.P.L. Global, LLC made the K-1 process clear and manageable. Their guidance was invaluable throughout our journey.",
       author: "A.B., Los Angeles",
       location: "Los Angeles"
     },

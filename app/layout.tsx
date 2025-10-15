@@ -27,8 +27,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tplglobal.net/"),
   title: {
-    default: "TPL Global | Top U.S. Immigration Consultant for Indians",
-    template: "%s | TPL Global",
+    default: "T.P.L. Global, LLC | Top U.S. Immigration Consultant for Indians",
+    template: "%s | T.P.L. Global, LLC",
   },
   description:
     "We help individuals and families worldwide with U.S. visas, green cards, and citizenship. Practical advice. Careful execution. Book a consultation.",
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
     "SIJ",
     "citizenship N-400",
     "Tejas G. Pate, Esq.l",
-    "TPL Global",
+    "T.P.L. Global, LLC",
     "Boston Top Immigration Lawyer",
   ],
   openGraph: {
     type: "website",
     url: "https://www.tplglobal.net/",
-    siteName: "TPL Global",
+    siteName: "T.P.L. Global, LLC",
     title:
       "Clear and effective U.S. immigration strategy | Wherever you are in the world.",
     description:
@@ -66,13 +66,13 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "TPL Global — U.S. Immigration",
+        alt: "T.P.L. Global, LLC — U.S. Immigration",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TPL Global — U.S. Immigration for Individuals & Families",
+    title: "T.P.L. Global, LLC — U.S. Immigration for Individuals & Families",
     description:
       "Step-by-step help with visas, green cards, and citizenship. Practical advice. Careful execution.",
     images: ["/og/tpl-global-og.jpg"],
