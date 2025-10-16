@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description:
-    "Review the terms of use for accessing and using TPL Global Immigration Law Firm's website and services.",
+    "Review the terms of use for accessing and using T.P.L. Global, LLC Immigration Law Firm's website and services.",
   alternates: {
     canonical: "https://tplglobal.net/terms-of-use",
   },
@@ -23,7 +23,7 @@ const TermsOfUse = () => {
 
           <div className="prose prose-lg max-w-none space-y-8">
             <p>
-              Welcome to the website of TPL Global ("we," "our," or "us"). By
+              Welcome to the website of T.P.L. Global, LLC ("we," "our," or "us"). By
               accessing or using this site, you agree to the following terms.
               Please read them carefully.
             </p>
@@ -67,7 +67,7 @@ const TermsOfUse = () => {
               </h2>
               <p>
                 All content on this site—including text, graphics, logos, and
-                design—is owned by or licensed to TPL Global. You may view
+                design—is owned by or licensed to T.P.L. Global, LLC. You may view
                 and download content for personal use, but you may not
                 reproduce, distribute, or use it for commercial purposes without
                 prior written consent.
@@ -121,7 +121,7 @@ const TermsOfUse = () => {
                 us:
               </p>
               <div className="bg-muted p-6 rounded-lg">
-                <p className="font-semibold">TPL Global</p>
+                <p className="font-semibold">T.P.L. Global, LLC</p>
                 <p>Email: Tejas.p@tplglobal.net</p>
                 <p>Office: 617-391-7741</p>
               </div>

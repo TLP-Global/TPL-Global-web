@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <a href="/" className="text-xl font-bold">
-                <img src="/logo.png" alt="TPL Global Logo" className="w-40" />
+                <img src="/logo.png" alt="T.P.L. Global, LLC Logo" className="w-40" />
               </a>
             </div>
             <p className="text-background/80 mb-4 max-w-md">
@@ -28,7 +28,7 @@ const Footer = () => {
             <div className="text-background/70 text-sm">
               <p>Mr. Tejas G. Patel, Esq.</p>
               <p>11 Years Experience Since 2014</p>
-              <p>TPL Global - Founded November 2020</p>
+              <p>T.P.L. Global, LLC - Founded November 2020</p>
             </div>
             <div className="my-4 flex gap-4 flex-wrap">
               <a
@@ -108,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-background/60 text-sm">
-              © 2025 TPL Global Immigration Law. All rights reserved.
+              © 2025 T.P.L. Global, LLC Immigration Law. All rights reserved.
             </div>
             <div className="flex items-center gap-4 text-background/60 text-sm">
               <a href="/faqs" className="hover:text-accent transition-colors">

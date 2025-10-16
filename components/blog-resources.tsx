@@ -20,25 +20,28 @@ import Link from "next/link";
 const BlogAndResources = () => {
   const blogPosts = [
     {
-      title: "B-1 vs B-2: What's the difference?",
+      title: "Immigrant Advocacy in 2025: How Communities Are Fighting Back",
       excerpt:
-        "Understanding the key distinctions between business and tourist visas.",
+        "In 2025, stronger advocacy networks and tech-driven support are empowering Indian immigrants to navigate complex U.S. immigration rules.",
       date: "March 15, 2024",
       readTime: "5 min read",
+      link:"https://blog.tplglobal.net/post/immigrant-advocacy-2025"
     },
     {
-      title: "K-1 or CR-1 for spouses: Which is right for you?",
+      title: "How New US Immigration Policies in 2025 Are Affecting Families and Children",
       excerpt:
-        "Compare fiancé and spouse visa options to make the best choice.",
+        "In 2025, stricter U.S. immigration policies and digital case tracking have improved efficiency but created new challenges for Indian families seeking visas and reunification.",
       date: "March 10, 2024",
       readTime: "7 min read",
+      link:"https://blog.tplglobal.net/post/us-immigration-policy-2025-family-impact"
     },
     {
-      title: "Common mistakes on the I-130 petition",
+      title: "Naturalization Under Scrutiny - Neighborhood Investigations and Expanded Vetting",
       excerpt:
-        "Avoid these pitfalls when filing family-based immigration petitions.",
+        "In 2025, tighter U.S. immigration screening and digital tracking aim to boost efficiency but have created mixed outcomes for Indian families seeking visas and reunification.",
       date: "March 5, 2024",
       readTime: "6 min read",
+      link:"https://blog.tplglobal.net/post/naturalization-under-scrutiny-expanded-vetting-2025"
     },
   ];
 
@@ -144,19 +147,22 @@ const BlogAndResources = () => {
                 >
                   <Card className="card-professional bg-secondary group cursor-pointer hover:shadow-xl transition-all duration-300">
                     <CardHeader>
+                      {/*
                       <div className="flex items-center gap-2 text-sm text-blue-950/60 mb-2">
                         <Calendar className="h-4 w-4" />
                         {post.date}
                         <span>•</span>
                         <span>{post.readTime}</span>
                       </div>
+                        */
+                      }
                       <CardTitle className="group-hover:text-primary transition-colors">
                         {post.title}
                       </CardTitle>
                       <CardDescription>{post.excerpt}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <Link href={"https://blog.tplglobal.net/"}>
+                      <Link href={post.link}>
                         <Button
                           variant="outline"
                           size="sm"

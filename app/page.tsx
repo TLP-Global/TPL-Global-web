@@ -148,14 +148,14 @@ export default function Home() {
               </div>
               <div className="flex gap-2 p-2 px-4 bg-yellow-200/60 rounded-3xl">
                 <TrendingUp className="h-4 w-4" />
-                TPL Global - Founded Nov 2020
+                T.P.L. Global, LLC - Founded Nov 2020
               </div>
             </div>
           </div>
           <div className="mt-6 text-center ">
             <p className="text-white/80 text-sm">
               Tejas G. Patel, Esq. has been practicing law since 2014. Mr. Tejas
-              founded TPL Global on November 5, 2020 with the purpose of helping
+              founded T.P.L. Global, LLC on November 5, 2020 with the purpose of helping
               immigrants seek pathways to lawful status in the U.S.
             </p>
           </div>

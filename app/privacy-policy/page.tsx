@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
 
           <div className="prose prose-lg max-w-none space-y-8">
             <p>
-              TPL Global ("we," "our," or "us") respects your privacy. This
+              T.P.L. Global, LLC ("we," "our," or "us") respects your privacy. This
               policy explains how we collect, use, and protect your information
               when you visit our website or interact with us.
             </p>
@@ -147,7 +147,7 @@ const PrivacyPolicy = () => {
                 information is handled, please contact us:
               </p>
               <div className="bg-muted p-6 rounded-lg">
-                <p className="font-semibold">TPL Global</p>
+                <p className="font-semibold">T.P.L. Global, LLC</p>
                 <p>Email: Tejas.p@tplglobal.net</p>
                 <p>Office: 617-391-7741</p>
               </div>
