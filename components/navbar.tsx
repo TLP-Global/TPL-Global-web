@@ -155,10 +155,10 @@ const Navbar = () => {
                 <NavigationMenuContent>
                   <div className="grid gap-3 p-6 w-[400px] bg-background rounded-md ">
                     <NavigationMenuLink
-                      href="#"
+                      href="/infographics"
                       className="block py-2 hover:text-primary transition-colors"
                     >
-                      Start Here: Your U.S. Immigration Options
+                     Infographics 
                     </NavigationMenuLink>
                     <NavigationMenuLink
                       href="/processing-times"
@@ -262,6 +262,12 @@ const Navbar = () => {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium">Resources</h3>
                   <div className="pl-4 space-y-4">
+                    <a
+                      href="/infographics"
+                      className="font-medium block text-lg text-muted-foreground mb-2"
+                    >
+                     Infographics 
+                    </a>
                     <a
                       href="/processing-times"
                       className="font-medium block text-lg text-muted-foreground mb-2"
